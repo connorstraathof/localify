@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import DropDown from '../../Components/DropDown/DropDown'
 import DropDownNav from '../../Components/DropDownNav/DropDownNav'
 import Search from '../../Components/Search/Search'
+import '../../Styles/Navigation/Navigation.css'
 
 export default class Navigation extends React.Component {
   render() {
