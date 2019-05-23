@@ -1,5 +1,5 @@
 import React from 'react'
-import { Events, animateScroll as scroll, scroller } from 'react-scroll'
+import { animateScroll as scroll } from 'react-scroll'
 
 class ScrollToTop extends React.Component {
   constructor(props) {

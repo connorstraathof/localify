@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
+import '../../Styles/DropDownNav/DropDownNav.css'
 
 export default class DropDown extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class DropDown extends React.Component {
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <Dropdown id='dropdown' isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle caret>
           EXPLORE
         </DropdownToggle>

@@ -26,22 +26,7 @@
           align-items: center;
 }
 
-.a {
-  padding-top: 60px;
-}
-
-.a.span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.home__container__four {
+  height: 100px;
 }
 /*# sourceMappingURL=Home.css.map */

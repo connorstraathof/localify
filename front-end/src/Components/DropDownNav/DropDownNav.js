@@ -22,7 +22,7 @@ export default class DropDown extends React.Component {
   render() {
     return (
       <Dropdown id='dropdown nav' isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>
+        <DropdownToggle id='dropdown nav' caret>
           INFO
         </DropdownToggle>
         <DropdownMenu>

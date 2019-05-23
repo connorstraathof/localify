@@ -1,5 +1,8 @@
 #dropdown.nav {
     border-radius: 0px;
+    background-color: white;
+    color: black;
+    margin: 0px 5px; 
 }
 .dropdown-toggle.btn.btn-secondary {
     background-color: white;
@@ -24,10 +27,27 @@
     margin: 0px 5px;
 }
 .btn-secondary {
+    background-color: white;
     color: black;
     margin: 0px 5px;
 }
 .btn.show {
+    background-color: white;
     color: black;
     margin: 0px 5px;
+}
+.show.btn-secondary.dropdown-toggle {
+    background-color: white;
+    color: black;
+    margin: 0px 5px;
+}
+.btn-secondary.focus {
+    background-color: white;
+    color: black;
+    margin: 0px 5px; 
+}
+#dropdown {
+    background-color: white;
+    color: black;
+    margin: 0px 5px;  
 }

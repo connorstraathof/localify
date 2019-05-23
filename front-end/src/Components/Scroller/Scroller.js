@@ -6,7 +6,7 @@ class Scroll extends React.Component {
   render() {
     return (
       <div className='scroll__container'>
-        <a onClick={() => scroll.scrollMore(800)}>SUGGESTIONS</a>
+        <a onClick={() => scroll.scrollMore(600)}>SUGGESTIONS ---- </a>
         <a onClick={() => scroll.scrollMore(1600)}>MAP</a>
       </div>
     )
