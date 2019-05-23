@@ -30,3 +30,6 @@ const PORT = process.env.PORT || 8085
 app.listen(PORT, () => {
   console.log('connors server')
 })
+
+
+// PORT=8085 reconfig when neccessary in the .env
