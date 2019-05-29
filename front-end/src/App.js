@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <div>
+          <div className='main__div'>
             <Navigation />
 
             <Switch>

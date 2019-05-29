@@ -1,0 +1,68 @@
+[
+  {
+    "id": "574783399259954",
+    "title": "cafes",
+    "inventory": [
+      {
+        "id": 6705654999,
+        "name": "Revolver",
+        "short_description": "Detail-oriented shop with ethical & fair-trade coffee brewed fresh-to-order, plus baked goods.",
+        "long_description": "Revolver is about two things: Coffee, and the experience that should go with it. Our coffee program is simple, but precise. All drinks are made fresh to order - after you order it, never before - from a rotating menu of our favourite coffees from world class roasters around North America and beyond. It's simple: We order what we like, and we don't order what we don't. We like being consistent, so we measure and weigh every variable there is, until there isn't. And we like details, of which coffee is but one of many in a finely tuned life. But it's such an important one, isn't it?",
+        "location": "lat: 49.283415, lng: -123.109452",
+        "address": "325 CAMBIE ST.",
+        "contact": "604 558 4444",
+        "website": "http://revolvercoffee.ca"
+      },
+      {
+        "id": 6656931557,
+        "name": "Le Marché St George",
+        "short_description": "Warm, rustic-chic cafe offering elevated coffee drinks, baked goods, crêpes & gourmet foods.",
+        "long_description": "Le Marché St George is a general store, a café, an occasional event space, and a home. It’s a place where everyone is welcome. It’s real people making real things. It’s  Christmas events where Santa comes to takes photos with families all day to raise funds for the food bank.  It’s spontaneous moments where musicians come to play. It’s the best artisan chocolate and local jams. It’s fancy dinners and some not-so-fancy dinners.",
+        "location": "lat: 49.246565, lng: -123.094306",
+        "address": "4393 St George St",
+        "contact": "604-565-5107",
+        "website": "http://marchestgeorge.com"
+      },
+      {
+        "id": 8916191742,
+        "name": "49th Parallel",
+        "short_description": "Cozy hangout with a patio serving house-roasted coffee, espresso & freshly baked pastries.",
+        "long_description": "Every cup you drink should be exciting: a delicious representation of the region. To find these coffees, we work directly with farmers who share the same ambition and commitment for their craft as we do.",
+        "location": "lat: 49.259840, lng: -123.100836",
+        "address": "2902 Main St",
+        "contact": "604-872-4901",
+        "website": "https://49thcoffee.com"
+      },
+      {
+        "id": 9351935433,
+        "name": "Elysian Coffee",
+        "short_description": "UNCOMPLICATING COFFEE",
+        "long_description": "At Elysian, we source, roast and brew our coffee. We’ve spent a ton of time (probably too much time if we’re being totally honest) tinkering, measuring and analyzing every step of the process. After years of complexity, it has led us to simplicity. It’s led us to a straightforward, good tasting cup of coffee.",
+        "location": "lat: 49.265270, lng: -123.104963",
+        "address": "2301 Ontario St",
+        "contact": "604-559-0510",
+        "website": "https://elysiancoffee.com"
+      },
+      {
+        "id": 2855052607,
+        "name": "Milano Coffee",
+        "short_description": "Cozy, wood-hued cafe for espresso drinks, cold-brewed coffee & other beverages using its own roast.",
+        "long_description": "The legacy of Vancouver based Milano Coffee’s artisan tradition dates back three generations of Italian coffee heritage blended with over thirty years of West Coast culture. In 1984 visionary founder and Master Roaster, Francesco Curatolo, brought 75 years of Italian roasting and blending expertise to Vancouver, Canada garnering a worldwide reputation for his exquisitely crafted Italian coffees.",
+        "location": "lat: 49.263912, lng: -123.108704",
+        "address": "156 W 8th Ave",
+        "contact": "604-879-4468",
+        "website": "http://www.milanocoffee.ca"
+      },
+      {
+        "id": 6365216952,
+        "name": "JJ Bean",
+        "short_description": "Commercial Drive has an eclectic and cozy atmosphere. This café is the perfect place to warm up on a cold day, with the perfect patio to cool off in summer.",
+        "long_description": "We believe people have intrinsic value and seek to honour our coffee producers, our staff, and our customers by only serving the freshest, best tasting coffee possible. To this end, we source the highest quality green coffee and roast it in small batches daily, guided by one principle: the best taste wins.",
+        "location": "lat: 49.265808, lng: -123.069466", 
+        "address": " 2206 Commercial Dr",
+        "contact": "604-254-3723",
+        "website": "https://jjbeancoffee.com"
+      }
+    ]
+  }
+]

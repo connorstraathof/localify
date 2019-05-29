@@ -8,8 +8,8 @@ class Grocery extends React.Component {
     return (
       <div className='generic__container'>
         <div className='generic__container1'>
-          <h1>GROCERY</h1>
-          <Card body>
+          <h1 className='generic__header'>GROCERY</h1>
+          <Card body className='generic__card-body'>
             <CardText>
               Listicle yr plaid thundercats artisan taxidermy put a bird on it before they sold out
               VHS prism wayfarers chartreuse mlkshk. Gentrify blog poke activated charcoal

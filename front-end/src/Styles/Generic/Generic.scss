@@ -1,6 +1,25 @@
 .generic__container {
-
+  width: 100%;
 }
 .generic__container1 {
-    margin: 0px 50px;
+  margin: 0px 50px;
 }
+.generic__header {
+}
+.generic__card-body {
+  margin: 50px 0px 0px 0px;
+}
+#row {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+.generic__head-space {
+  height: 70px;
+  width: 100%;
+}
+// .generic__shoplist {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: 0px;
+// }

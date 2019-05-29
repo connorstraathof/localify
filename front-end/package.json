@@ -13,6 +13,7 @@
     "react-scroll-button": "^1.1.1",
     "react-with-firebase-auth": "^1.0.3",
     "reactstrap": "^8.0.0",
+    "recompose": "^0.30.0",
     "register-service-worker": "^1.6.2"
   },
   "scripts": {

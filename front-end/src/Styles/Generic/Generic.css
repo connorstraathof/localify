@@ -1,4 +1,28 @@
+.generic__container {
+  width: 100%;
+}
+
 .generic__container1 {
   margin: 0px 50px;
+}
+
+.generic__card-body {
+  margin: 50px 0px 0px 0px;
+}
+
+#row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0px;
+}
+
+.generic__head-space {
+  height: 70px;
+  width: 100%;
 }
 /*# sourceMappingURL=Generic.css.map */
