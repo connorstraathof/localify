@@ -14,9 +14,8 @@ class Cafes extends React.Component {
     axios.get(url).then(response => {
       this.setState({
         shops: response.data[0].inventory
-        
       })
-      console.log(response.data)
+      console.log(response.data[0].inventory)
     })
   }
   componentDidMount() {
@@ -27,37 +26,33 @@ class Cafes extends React.Component {
     const cafeList = this.state.shops.map((cafe, i) => {
       return (
         <div>
-          <Row id='row' >
-            <Col id='card' sm='6'>
-              <Card body id='generic__card-body'>
+          <Row id='generic__row'>
+            <Col id='generic__col' sm='6'>
+              <Card id='generic__card'>
                 <CardTitle>{cafe.name}</CardTitle>
-                <CardText>
-                  {cafe.short_description}
-                </CardText>
-                <CardText>
-                  {cafe.contact}
-                </CardText>
-                <CardText>
-                  {cafe.address}
-                </CardText>
+                <CardText>{cafe.short_description}</CardText>
+                <CardText>{cafe.contact}</CardText>
+                <CardText>{cafe.address}</CardText>
                 <Button href={cafe.website}>WEBSITE</Button>
               </Card>
             </Col>
           </Row>
         </div>
       )
-  })
-return(
-  <div >
-    <div className='generic__head-space'/>
-    <div className='generic__shoplist'>
-    {cafeList}
-    </div>
-    {/* <div><ShopMap /></div> */}
-    
-  </div>
-)
-}
+    })
+    return (
+      <div>
+        <div className='generic__head-space' />
+        <div>
+          <h1>Cafes</h1>
+        </div>
+        <div>{cafeList}</div>
+        <div>
+          <ShopMap />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Cafes
