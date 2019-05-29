@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,oBAAoB,CAAC;EACjB,MAAM,EAAE,QAAQ;CACnB",
+    "sources": [
+        "Generic.scss"
+    ],
+    "names": [],
+    "file": "Generic.css"
+}

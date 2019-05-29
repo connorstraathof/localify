@@ -1,6 +1,9 @@
 import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import '../../Styles/DropDownNav/DropDownNav.css'
+import Modal from '../AboutModal/AboutModal'
+import ContactModal from '../ContactModal/ContactModal'
+import JoinModal from '../JoinModal/JoinModal'
 
 
 export default class DropDown extends React.Component {
@@ -26,9 +29,10 @@ export default class DropDown extends React.Component {
           INFO
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>ABOUT US</DropdownItem>
-          <DropdownItem>CONTACT</DropdownItem>
-          <DropdownItem href="/signup">BE A PART OF US</DropdownItem>
+          <div><Modal/></div>
+          <div><ContactModal/></div>
+          <div><JoinModal/></div>
+          {/* <DropdownItem href="/join">BE A PART OF US</DropdownItem> */}
         </DropdownMenu>
       </Dropdown>
     );

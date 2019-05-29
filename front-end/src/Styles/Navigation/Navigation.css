@@ -1,4 +1,8 @@
 .navbar.navbar-light.bg-faded {
   border-bottom: 1px solid #bebebe;
+  z-index: 1000;
+  position: fixed;
+  background-color: white;
+  width: 100%;
 }
 /*# sourceMappingURL=Navigation.css.map */

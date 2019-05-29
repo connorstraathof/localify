@@ -14,4 +14,14 @@
 #card {
   margin: 10px 0px;
 }
+
+.suggestions__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
 /*# sourceMappingURL=HomeCards.css.map */

@@ -9,4 +9,19 @@
       align-content: center;
   height: 300px;
 }
+
+.map-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+.header {
+  padding: 20px;
+  border: 1px solid black;
+}
 /*# sourceMappingURL=Map.css.map */

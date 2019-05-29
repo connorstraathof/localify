@@ -2,8 +2,13 @@ import React from 'react'
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap'
 import '../../Styles/HomeCards/HomeCards.css'
 
-const Example = props => {
+const HomeCards = props => {
   return (
+    <div>
+      <div className='suggestions__container'>
+        <h1 className='header'>SUGGESTIONS</h1>
+      </div>
+      <div>
     <Row id='row'>
       <Col id='card' sm='6'>
         <Card body>
@@ -60,7 +65,9 @@ const Example = props => {
         </Card>
       </Col>
     </Row>
+    </div>
+    </div>
   )
 }
 
-export default Example
+export default HomeCards

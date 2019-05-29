@@ -1,0 +1,10 @@
+.join__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px 0px;
+}
+/*# sourceMappingURL=Join.css.map */

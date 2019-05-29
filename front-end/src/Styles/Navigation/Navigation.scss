@@ -1,3 +1,7 @@
 .navbar.navbar-light.bg-faded {
-    border-bottom: 1px solid rgb(190, 190, 190)
+    border-bottom: 1px solid rgb(190, 190, 190);
+    z-index: 1000;
+    position: fixed;
+    background-color: white;
+    width: 100%
 }

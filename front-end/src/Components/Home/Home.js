@@ -11,7 +11,7 @@ class Home extends React.Component {
       <div>
         <div className='home__container__one'>
           <div className='organizer__one'>
-            <h4>WELCOME</h4>
+            <h4 className='home__title'>LOCALIFY VANCOUVER</h4>
             <Scroll />
           </div>
         </div>
@@ -20,9 +20,6 @@ class Home extends React.Component {
         </div>
         <div className='home__container__three'>
           <Map />
-        </div>
-        <div className='home__container__four'>
-          <ScrollUp />
         </div>
       </div>
     )
