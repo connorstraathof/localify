@@ -5,8 +5,8 @@ import axios from 'axios'
 const url = 'http://localhost:8080/shops'
 
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  width: '60%',
+  height: '60%'
 }
 
 export class ShopMap extends Component {

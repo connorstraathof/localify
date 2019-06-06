@@ -1,69 +1,66 @@
 import React from 'react'
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap'
-import '../../Styles/HomeCards/HomeCards.css'
 import '../../Styles/Generic/Generic.css'
+import axios from 'axios'
+import { Button } from 'reactstrap'
+import ShopMap from '../ShopMap/ShopMap'
+const url = 'http://localhost:8080/shops'
 
 class Grocery extends React.Component {
+  state = {
+    shops: [],
+    id: ''
+  }
+  getGrocery = () => {
+    axios.get(url).then(response => {
+      this.setState({
+        shops: response.data[1].inventory
+      })
+      console.log(response.data[1].inventory)
+    })
+  }
+  componentDidMount() {
+    this.getGrocery()
+  }
+
   render() {
-    return (
-      <div className='generic__container'>
-        <div className='generic__container1'>
-          <h1 className='generic__header'>GROCERY</h1>
-          <Card body className='generic__card-body'>
-            <CardText>
-              Listicle yr plaid thundercats artisan taxidermy put a bird on it before they sold out
-              VHS prism wayfarers chartreuse mlkshk. Gentrify blog poke activated charcoal
-              kickstarter marfa, artisan echo park hashtag next level. Vape woke pickled, neutra
-              waistcoat activated charcoal wayfarers twee shaman pok pok hashtag. Quinoa trust fund
-              pickled, authentic craft beer crucifix 8-bit health goth aesthetic vinyl bicycle
-              rights.
-            </CardText>
-          </Card>
+    const groceryList = this.state.shops.map((grocery, i) => {
+      return (
+        <div>
+          <div>
+            <div id='generic__card'>
+              <h1>{grocery.name}</h1>
+              <div className='generic__image'/>
+              <div className='generic__lower__card'>
+              <p>{grocery.short_description}</p>
+              <p>{grocery.contact}</p>
+              <p>{grocery.address}</p>
+              <Button href={grocery.website}>WEBSITE</Button>
+              </div>
+            </div>
+          </div>
         </div>
-        <br />
-        <div className='generic__container1'>
-          <h1>Shops</h1>
-          <Row id='row'>
-            <Col id='card' sm='6'>
-              <Card body>
-                <CardTitle>Artisan</CardTitle>
-                <CardText>
-                  With supporting text below as a natural lead-in to additional content.
-                </CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-            <Col id='card' sm='6'>
-              <Card body>
-                <CardTitle>Artisan</CardTitle>
-                <CardText>
-                  With supporting text below as a natural lead-in to additional content.
-                </CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-            <Col id='card' sm='6'>
-              <Card body>
-                <CardTitle>Artisan</CardTitle>
-                <CardText>
-                  With supporting text below as a natural lead-in to additional content.
-                </CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-            <Col id='card' sm='6'>
-              <Card body>
-                <CardTitle>Artisan</CardTitle>
-                <CardText>
-                  With supporting text below as a natural lead-in to additional content.
-                </CardText>
-                <Button>Go somewhere</Button>
-              </Card>
-            </Col>
-          </Row>
+      )
+    })
+    return (
+      <div>
+        <div className='generic__head-space' />
+        <div className='generic__header'>
+          <h1>GROCERY</h1>
+          <p>
+            Listicle yr plaid thundercats artisan taxidermy put a bird on it before they sold out
+            VHS prism wayfarers chartreuse mlkshk. Gentrify blog poke activated charcoal kickstarter
+            marfa, artisan echo park hashtag next level. Vape woke pickled, neutra waistcoat
+            activated charcoal wayfarers twee shaman pok pok hashtag. Quinoa trust fund pickled,
+            authentic craft beer crucifix 8-bit health goth aesthetic vinyl bicycle rights.
+          </p>
+        </div>
+        <div id='generic__row'>{groceryList}</div>
+        <div className='generic__shopmap'>
+          <ShopMap />
         </div>
       </div>
     )
   }
 }
+
 export default Grocery

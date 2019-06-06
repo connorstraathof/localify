@@ -36,6 +36,7 @@
   height: 250px;
   width: 300px;
   border: 1px white solid;
+  background-color: rgba(90, 129, 161, 0.4);
 }
 
 .home__container__four {
