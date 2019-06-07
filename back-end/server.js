@@ -6,15 +6,13 @@
 
 // app.use(cors())
 
-
-
 // app.get('/', (req, res) => {
 //   res.send('express is running');
 // });
 
 // app.get('/Stock/:id', (req, res) => {
 //   const singleInventory = Inventory.find(id => {
-//     return id.id == req.params.id 
+//     return id.id == req.params.id
 //   })
 //   singleInventory ? res.send(singleInventory) : res.status(404).send('Item not found')
 // })
@@ -36,6 +34,5 @@
 // app.listen(8080, () => {
 //   console.log('connors server')
 // })
-
 
 // PORT=8085 reconfig when necessary in the .env
