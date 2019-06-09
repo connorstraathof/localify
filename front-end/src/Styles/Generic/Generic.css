@@ -64,16 +64,25 @@
   height: 200px;
 }
 
-/* style rules from tutorial*/
-
 .container {
   max-width: 700px;
   margin: auto;
 }
 
-.blog-main, .home {
+.home {
   max-width: 700px;
   margin: auto;
+}
+
+.blog-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Home header */
@@ -83,8 +92,8 @@
 
 /* Needs to be modified for the non-background image version of avatar */
 .home .blog-avatar {
-  height: 200px;
-  width: 300px;
+  height: 100px;
+  width: 200px;
   background-position: center;
   background-size: cover;
   margin: 1em auto;
@@ -154,11 +163,25 @@
 /*
  * Blog posts
  */
+#specific__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .outer-container {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+}
+
+.backup__container {
+  margin: 100px 0px 0px 0px;
 }
 
 .back {
@@ -196,6 +219,16 @@
 
 .blog-post {
   margin-bottom: 3rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px 30px;
+  width: 350px;
+  height: 350px;
+}
+
+.info__container {
+  padding: 20px;
+  font-size: 10px;
 }
 
 .blog-post h2 {
