@@ -90,6 +90,7 @@ export default class Shops extends React.Component {
                 </div>
                 </a>
 								<div className='info__container'>
+                <div id='generic__post__title'>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</div>
                   {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
                   {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
 									{RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}

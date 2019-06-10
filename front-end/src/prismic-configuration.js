@@ -15,7 +15,10 @@ export default {
     linkResolver(doc) {
       if (doc.type === 'post') return `/cafes/${doc.uid}`;
       if (doc.type === 'grocery_post') return `/grocery/${doc.uid}`;
-      if (doc.type === 'shop_post') return `/shop/${doc.uid}`;
+      if (doc.type === 'shop_post') return `/shops/${doc.uid}`;
+      if (doc.type === 'food_post') return `/food/${doc.uid}`;
+      if (doc.type === 'drinks_post') return `/drinks/${doc.uid}`;
+      if (doc.type === 'artist_post') return `/artists/${doc.uid}`;
       return '/';
     },
 

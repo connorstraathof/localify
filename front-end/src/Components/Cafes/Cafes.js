@@ -90,6 +90,7 @@ export default class BlogHome extends React.Component {
                 </div>
                 </a>
 								<div className='info__container'>
+                <div className='generic__post__title'><h1>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1></div>
                   {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
                   {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
 									{RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}

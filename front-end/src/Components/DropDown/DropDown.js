@@ -24,11 +24,11 @@ export default class DropDown extends React.Component {
         <DropdownToggle caret>EXPLORE</DropdownToggle>
         <DropdownMenu>
           <DropdownItem href='/artists'>ARTISTS</DropdownItem>
-          <DropdownItem href='/artisanal'>ARTISANAL</DropdownItem>
           <DropdownItem href='/cafes'>CAFES</DropdownItem>
+          <DropdownItem href='/drinks'>DRINKS</DropdownItem>
+          <DropdownItem href='/food'>FOOD</DropdownItem>
           <DropdownItem href='/grocery'>GROCERY</DropdownItem>
           <DropdownItem href='/shops'>SHOPS</DropdownItem>
-          <DropdownItem href='/food'>FOOD</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     )

@@ -76,15 +76,24 @@ export default class Post extends React.Component {
           </Helmet>
           <div className='outer-container'>
             <div className='backup__container'>
-            <div className='back'>
-              <a href='/cafes'>back to list</a>
-            </div>
-            {this.logo()}
-            <div id='specific__container'>
-            {titled ? RichText.asText(this.state.doc.data.long_description) : 'Untitled'}
-            {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
-            {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
-            </div>
+              <div className='back'>
+                <a href='/cafes'>back to list</a>
+              </div>
+              {this.logo()}
+              <div className='info__container'>
+                <div className='generic__post__title'>
+                  <h1>{titled ? RichText.asText(this.state.doc.data.title) : 'Untitled'}</h1>
+                </div>
+                <div className='generic__post__one'>
+                  {titled ? RichText.asText(this.state.doc.data.long_description) : 'Untitled'}
+                </div>
+                <div className='generic__post__one'>
+                  {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
+                </div>
+                <div className='generic__post__one'>
+                  {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
+                </div>
+              </div>
             </div>
           </div>
           {/* Go through the slices of the post and render the appropiate one */}
