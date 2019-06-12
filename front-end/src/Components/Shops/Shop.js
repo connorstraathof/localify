@@ -45,8 +45,8 @@ export default class Shop extends React.Component {
   logo() {
     const avatar = { backgroundImage: 'url(' + this.state.doc.data.logo.url + ')' }
     return (
-      <div className='home'>
-        <div className='blog-avatar' style={avatar} />
+      <div className='home__two'>
+        <div className='blog-avatar__two' style={avatar} />
       </div>
     )
   }

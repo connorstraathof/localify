@@ -7,23 +7,17 @@ import Loader2 from '../Loader2/Loader2'
 // import ScrollUp from '../ScrollToTop/ScrollToTop'
 
 class Home extends React.Component {
-  state = {
-    loading: true
- }
+  constructor(props) {
+  super(props)
+  this.state = {
+    isLoading: true
+ }}
  componentDidMount(){
-  setTimeout(()=>{
-     this.setState({loading:false});
-  },3000); // 2000 milliseconds = 2 seconds
+  this.setState({isLoading: false})
 }
   render() {
-    if(this.state.loading){
-      return (
-        <div>
-            <Loader2 size={100} />
-        </div>
-      );
-   }
     return (
+      this.state.isLoading ? <Loader2/> :
       <div>
         <div className='home__container__one'>
           <div className='organizer__one'>

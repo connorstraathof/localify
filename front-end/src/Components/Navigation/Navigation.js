@@ -13,9 +13,9 @@ export default class Navigation extends React.Component {
           <NavbarBrand href='/' className='mr-auto'>
             LOCALIFY
           </NavbarBrand>
-          <DropDownNav/>
+          <DropDownNav />
           <DropDown />
-          <Search/>
+          <div id='content'/>
         </Navbar>
       </div>
     )

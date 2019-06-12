@@ -12,56 +12,56 @@ const HomeCards = props => {
     <Row id='row'>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>ARTIST</CardTitle>
+          <CardTitle>LERKE NENNEMANN</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          Hailing from Hamburg, Germany Lerke has been steadily developing her style from an early age. 
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/artists/25'>Go somewhere</Button>
         </Card>
       </Col>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>SHOP</CardTitle>
+          <CardTitle>E:CLE</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          Find Korean fashion and Indi-Designer Brands at E:CLE.
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/shops/13'>Go somewhere</Button>
         </Card>
       </Col>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>GROCERY</CardTitle>
+          <CardTitle>FAMOUS FOODS</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          Famous Foods has always been the spot in town to shop for Organic and natural foods such as flours, grains, beans, spices, and herbs.
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/grocery/7'>Go somewhere</Button>
         </Card>
       </Col>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>ARTISAN</CardTitle>
+          <CardTitle>THE LIBRA ROOM</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          Funky hangout offering creative cocktails and casual Mediterranean eats plus live music nightly.
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/drinks/26'>Go somewhere</Button>
         </Card>
       </Col>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>CAFE</CardTitle>
+          <CardTitle>JJ BEAN</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          This café is the perfect place to warm up on a cold day, with the perfect patio to cool off in summer.
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/cafes/6'>Go somewhere</Button>
         </Card>
       </Col>
       <Col id='card' sm='6'>
         <Card body>
-          <CardTitle>FOOD</CardTitle>
+          <CardTitle>Como Taperia</CardTitle>
           <CardText>
-            With supporting text below as a natural lead-in to additional content.
+          Como Taperia is a tapas bar and restaurant in Vancouver's Mount Pleasant neighbourhood.
           </CardText>
-          <Button>Go somewhere</Button>
+          <Button href='http://localhost:3000/food/15'>Go somewhere</Button>
         </Card>
       </Col>
     </Row>
