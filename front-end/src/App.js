@@ -19,6 +19,7 @@ import Shops from './Components/Shops/Shops'
 import Shop from './Components/Shops/Shop'
 import Foods from './Components/Food/Foods'
 import Food from './Components/Food/Food'
+import SearchArea from './Components/Search/SearchAreas'
 import NotFound from './Components/NotFound/NotFound'
 
 const App = props => (
@@ -91,6 +92,7 @@ const App = props => (
           path='/food/:uid'
           render={routeProps => <Food {...routeProps} prismicCtx={props.prismicCtx} />}
         />
+        <Route exact path='/search' component={SearchArea}/>
       </Switch>
     </div>
   </Router>

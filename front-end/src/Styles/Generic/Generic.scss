@@ -1,3 +1,46 @@
+// search styles
+.search {
+  height: 100%;
+  width: 100%;
+  padding: 150px 0px 0px 0px
+}
+.search__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.search__container__two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search__input {
+  margin: 0px 0px 10px 0px;
+  border: 1px solid black;
+}
+.search__shops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.search__shops__route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+// search styles
 h1 {
   font-size: 15px;
 }
