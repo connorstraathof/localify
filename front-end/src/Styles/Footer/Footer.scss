@@ -1,0 +1,44 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid black;
+  width: 75%;
+  height: 200px;
+}
+.footer__left {
+  width: 50%;
+  padding: 10px;
+}
+.footer__legal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0px 0px 0px;
+  width: 200px;
+}
+.footer__copyright {
+    display: flex;
+  background: url(../../Assets/Icons/icons8-copyright-96.svg) no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+.footer__logo {
+    display: flex;
+  font-size: 16px;
+  margin: 0px;
+}
+.footer__right {
+  width: 50%;
+  padding: 10px;
+}
+.footer__aid {
+    display: flex;
+    margin: 15px 0px 0px 0px;
+    width: 200px;
+}

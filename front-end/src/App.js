@@ -3,24 +3,23 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import 'firebase/auth'
 import Navigation from './Components/Navigation/Navigation'
+import Footer from './Components/Footer/Footer'
 import Home from './Components/Home/Home'
-import LogIn from './Components/LogIn'
-import Join from './Components/Join/Join'
 // import SignUp from './Components/SignUp'
-import Grocery from './Components/Grocery/Grocery'
-import Grocer from './Components/Grocery/Grocer'
-import Cafes from './Components/Cafes/Cafes'
-import Cafe from './Components/Cafes/Cafe'
-import Drinks from './Components/Drinks/Drinks'
-import Drink from './Components/Drinks/Drink'
-import Artist from './Components/Artists/Artist'
-import Artists from './Components/Artists/Artists'
-import Shops from './Components/Shops/Shops'
-import Shop from './Components/Shops/Shop'
-import Foods from './Components/Food/Foods'
-import Food from './Components/Food/Food'
-import SearchArea from './Components/Search/SearchAreas'
-import NotFound from './Components/NotFound/NotFound'
+import Grocery from './Components/ShopsAll/Grocery/Grocery'
+import Grocer from './Components/ShopsAll/Grocery/Grocer'
+import Cafes from './Components/ShopsAll/Cafes/Cafes'
+import Cafe from './Components/ShopsAll/Cafes/Cafe'
+import Drinks from './Components/ShopsAll/Drinks/Drinks'
+import Drink from './Components/ShopsAll/Drinks/Drink'
+import Artist from './Components/ShopsAll/Artists/Artist'
+import Artists from './Components/ShopsAll/Artists/Artists'
+import Shops from './Components/ShopsAll/Shops/Shops'
+import Shop from './Components/ShopsAll/Shops/Shop'
+import Foods from './Components/ShopsAll/Food/Foods'
+import Food from './Components/ShopsAll/Food/Food'
+import NavSide from './Components/NavSide/NavSide'
+// import NotFound from './Components/NotFound/NotFound'
 
 const App = props => (
   <Router>
@@ -50,8 +49,6 @@ const App = props => (
           path='/cafes/:uid'
           render={routeProps => <Cafe {...routeProps} prismicCtx={props.prismicCtx} />}
         />
-        <Route exact path='/login' component={LogIn} />
-        <Route exact path='/join' component={Join} />
         <Route
           exact
           path='/grocery'
@@ -92,8 +89,9 @@ const App = props => (
           path='/food/:uid'
           render={routeProps => <Food {...routeProps} prismicCtx={props.prismicCtx} />}
         />
-        <Route exact path='/search' component={SearchArea}/>
+        {/* <Route exact path='/navside' component={NavSide}/> */}
       </Switch>
+      <Footer/>
     </div>
   </Router>
 )

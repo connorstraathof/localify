@@ -1,70 +1,220 @@
-
-input {
-    outline: none;
-}
-input[type=search] {
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	font-family: inherit;
-	font-size: 100%;
-}
-input::-webkit-search-decoration,
-input::-webkit-search-cancel-button {
-	display: none; 
-}
-
-
-input[type=search] {
-	background: white url('../../Assets/Icons/search.svg') no-repeat 1px center;
-    border: none;
-    margin: 0px 0px 0px 10px;
-	padding: 9px 0px 9px 0px;
-    width: 55px;
-    height: 10px;
-	
-	-webkit-border-radius: .2em;
-	-moz-border-radius: .2em;
-	border-radius: .2em;
-	
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	transition: all .5s;
-}
-input[type=search]:focus {
-	width: 130px;
-    background-color: #fff;
-    border: 1px solid black;
-	border-color: rgb(0, 0, 0);
+.navsearch__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 50px;
 }
 
-
-input:-moz-placeholder {
-	color: #999;
-}
-input::-webkit-input-placeholder {
-	color: #999;
+.navsearch__logo {
+  background: url("../../Assets/Icons/search.svg") no-repeat;
+  height: 30px;
+  width: 30px;
 }
 
-/* Demo 2 */
-#demo-2 input[type=search] {
-	width: 45px;
-	
-	color: transparent;
-	cursor: pointer;
+.search__container__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-#demo-2 input[type=search]:hover {
-	background-color: #fff;
+
+.search__shops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-#demo-2 input[type=search]:focus {
-	width: 130px;
-	padding-left: 30px;
-	color: #000;
-	background-color: #fff;
-	cursor: auto;
+
+.search__shops__route {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 3px;
 }
-#demo-2 input:-moz-placeholder {
-	color: transparent;
+
+.searchbar {
+  float: right;
+  background-color: white;
+  color: black;
+  padding: 6px 10px;
+  width: 120px;
+  border: none;
+  margin-top: 1px;
+  margin-right: 8px;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border-bottom: black solid 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-#demo-2 input::-webkit-input-placeholder {
-	color: transparent;
+
+.searchbar::-webkit-input-placeholder {
+  color: black;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  /* transition: 0.2s; */
 }
+
+.searchbar:-ms-input-placeholder {
+  color: black;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  /* transition: 0.2s; */
+}
+
+.searchbar::-ms-input-placeholder {
+  color: black;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  /* transition: 0.2s; */
+}
+
+.searchbar::placeholder {
+  color: black;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+  width: 400px;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* Stops the input box from inheriting the styling from the inputs on the request form */
+  border-bottom: black solid 2px;
+  outline: none;
+}
+
+.btn-search {
+  cursor: pointer;
+  color: black;
+  text-decoration: none !important;
+  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  padding-top: 5px;
+  margin-right: 40px;
+}
+
+.search {
+  height: 100%;
+  width: 100%;
+  padding: 20px 0px 0px 0px;
+}
+
+.search__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search__container__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.search__input {
+  margin: 0px 0px 10px 0px;
+  border: 1px solid black;
+}
+
+.search__shops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  height: 100px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.search__shops__route {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 60px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=Search.css.map */

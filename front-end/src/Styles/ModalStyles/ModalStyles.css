@@ -1,0 +1,123 @@
+#modal__button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 0px 5px 18px;
+}
+
+#search-modal__button__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  height: 38px;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.search-modal__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../../Assets/Icons/search.svg") no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0px 2px 0px 2px;
+  border: none;
+}
+
+.search-modal__button-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 2px 0px 2px;
+}
+
+#search-modal__header {
+  background: white;
+}
+
+#search-modal__footer {
+  background: white;
+  padding: 15px 5px;
+}
+
+#search-modal__footer__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  height: 30px;
+  width: 70px;
+  padding: 5px 5px 10px 5px;
+  margin: 0px;
+}
+
+#join-button__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 20px;
+  height: 38px;
+  width: 70px;
+}
+
+.join__icon {
+  height: 20px;
+  width: 20px;
+  background: url(../../Assets/Icons/icons8-add-user-female-100.svg) no-repeat;
+  background-size: 20px;
+  margin: 0px 5px 0px 0px;
+}
+
+.btn.btn-secondary {
+  margin: 0px 5px;
+  padding: 0px;
+}
+
+#join-modal__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#join-modal__header {
+  background: white;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+}
+/*# sourceMappingURL=ModalStyles.css.map */

@@ -1,9 +1,9 @@
 import React from 'react'
-import HomeCards from '../HomeCards/HomeCards'
+import HomeCards from '../Home/HomeCards/HomeCards'
 import '../../Styles/Home/Home.css'
-import Scroll from '../Scroller/Scroller'
-import Map from '../Map/index'
-import Loader2 from '../Loader2/Loader2'
+import Scroll from '../Tools/Scroller/Scroller'
+import Map from '../Maps/Map/index'
+// import Loader2 from '../Loader2/Loader2'
 // import ScrollUp from '../ScrollToTop/ScrollToTop'
 
 class Home extends React.Component {
@@ -17,7 +17,7 @@ class Home extends React.Component {
 }
   render() {
     return (
-      this.state.isLoading ? <Loader2/> :
+      // this.state.isLoading ? <Loader2/> :
       <div>
         <div className='home__container__one'>
           <div className='organizer__one'>
