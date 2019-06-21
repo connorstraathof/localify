@@ -22,13 +22,13 @@ export default class DropDown extends React.Component {
     return (
       <Dropdown id='dropdown' isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <div className='dropdown__button-container'>
-          <div className='dropdown__icon' />
-          <DropdownToggle id='dropdown-button' caret>
-            EXPLORE
+          <DropdownToggle id='dropdown-button'>
+            <div className='dropdown__icon' />
+            <h1>EXPLORE</h1>
           </DropdownToggle>
         </div>
 
-        <DropdownMenu>
+        <DropdownMenu id='shop-dropdown__menu'>
           <DropdownItem href='/artists'>ARTISTS</DropdownItem>
           <DropdownItem href='/cafes'>CAFES</DropdownItem>
           <DropdownItem href='/drinks'>DRINKS</DropdownItem>
@@ -40,3 +40,5 @@ export default class DropDown extends React.Component {
     )
   }
 }
+
+

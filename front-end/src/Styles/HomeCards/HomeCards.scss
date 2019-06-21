@@ -12,3 +12,11 @@
     justify-content: center;
     padding: 20px;
 }
+.card-body {
+    height: 150px;
+    width: 600px;
+}
+.card-body:hover {
+    background-color: rgb(34, 12, 236);
+    color: white;
+}

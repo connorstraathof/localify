@@ -52,7 +52,7 @@
     padding: 0px;
 }
 .dropdown-menu.show {
-    border-radius: 0px;
+    border-radius: 2px;
     background-color: white;
     color: black;
     margin: 0px 5px;
@@ -113,8 +113,20 @@
     box-shadow: none; 
 }
 #dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     box-shadow: none;
+    padding: 5px;
+
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus {
     box-shadow: none; 
+}
+
+// drop down shops
+
+#shop-dropdown__menu {
+    width: 100px;
 }

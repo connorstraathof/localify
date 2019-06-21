@@ -1,11 +1,11 @@
 import React from 'react'
-import NotFound from '../../../Components/NotFound/NotFound'
+import NotFound from '../../Tools/NotFound/NotFound'
 import { RichText, Date } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import { Helmet } from 'react-helmet'
-import Loader from '../../Tools/Loader/Loader'
+import Loader from '../../Tools/Loaders/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
-import NavSide from '../../NavSide/NavSide'
+import DropDownSide from '../../DropDown/DropDown'
 
 export default class BlogHome extends React.Component {
   constructor(props) {
@@ -82,14 +82,19 @@ export default class BlogHome extends React.Component {
           /* Default title when post has no title set */
           const defaultTitle = [<h1 key='title'>Untitled</h1>]
           return (
-            <div className='blog-post' data-wio-id={post.id} key={post.id}>
+            <a
+              className='blog-post'
+              data-wio-id={post.id}
+              key={post.id}
+              href={this.props.prismicCtx.linkResolver(post)}
+            >
               <h2>
                 {/* We render a link to a particular post using the linkResolver for the url and its title */}
-                <a href={this.props.prismicCtx.linkResolver(post)}>
-                  <div className='home'>
-                    <div className='blog-avatar' style={logo} />
-                  </div>
-                </a>
+
+                <div className='home'>
+                  <div className='blog-avatar' style={logo} />
+                </div>
+
                 <div className='info__container'>
                   <div className='generic__post__title'>
                     <h1>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
@@ -113,7 +118,7 @@ export default class BlogHome extends React.Component {
               </p>
               {/* Renders a small preview of the post's text */}
               {this.firstParagraph(post)}
-            </div>
+            </a>
           )
         })}
       </div>
@@ -152,7 +157,7 @@ export default class BlogHome extends React.Component {
           </Helmet>
           <div className='page__organizer'>
             <div className='nav-side__container'>
-            <NavSide/>
+              <DropDownSide />
             </div>
             <div className='shops-side__container'>
               {this.blogHomeHead()}

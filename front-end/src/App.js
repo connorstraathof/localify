@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import 'firebase/auth'
-import Navigation from './Components/Navigation/Navigation'
+import Navigation from './Components/Navigations/Navigation/Navigation'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
+import Comments from './Components/Comments/MainComment'
 import Footer from './Components/Footer/Footer'
 // import SignUp from './Components/SignUp'
 import Grocery from './Components/ShopsAll/Grocery/Grocery'
@@ -31,6 +32,7 @@ const App = props => (
         {/* <Route component={NotFound} /> */}
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={About} />
+        <Route exact path='/comments' component={Comments} />
         <Route
           exact
           path='/artists'

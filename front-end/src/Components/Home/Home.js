@@ -1,8 +1,8 @@
 import React from 'react'
 import HomeCards from '../Home/HomeCards/HomeCards'
 import '../../Styles/Home/Home.css'
-import Scroll from '../Tools/Scroller/Scroller'
-import Map from '../Maps/Map/index'
+import Scroll from '../Tools/Scrollers/Scroller/Scroller'
+// import Map from '../Maps/Map/index'
 // import Loader2 from '../Loader2/Loader2'
 // import ScrollUp from '../ScrollToTop/ScrollToTop'
 
@@ -28,9 +28,9 @@ class Home extends React.Component {
         <div className='home__container__two'>
           <HomeCards />
         </div>
-        <div className='home__container__three'>
+        {/* <div className='home__container__three'>
           <Map />
-        </div>
+        </div> */}
       </div>
     )
   }

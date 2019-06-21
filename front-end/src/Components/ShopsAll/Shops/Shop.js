@@ -1,11 +1,11 @@
 import React from 'react'
-import NotFound from '../../../Components/NotFound/NotFound'
+import NotFound from '../../Tools/NotFound/NotFound'
 import { RichText } from 'prismic-reactjs'
 import Text from '../../Slices/Text'
 import Quote from '../../Slices/Quote'
 import ImageCaption from '../../Slices/ImageCaption'
 import { Helmet } from 'react-helmet'
-import Loader from '../../Tools/Loader/Loader'
+import Loader from '../../Tools/Loaders/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
 
 // Declare your component

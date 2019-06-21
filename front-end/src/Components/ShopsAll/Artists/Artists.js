@@ -1,9 +1,9 @@
 import React from 'react'
-import NotFound from '../../NotFound/NotFound'
+import NotFound from '../../Tools/NotFound/NotFound'
 import { RichText, Date } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import { Helmet } from 'react-helmet'
-import Loader from '../../Tools/Loader/Loader'
+import Loader from '../../Tools/Loaders/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
 
 export default class Foods extends React.Component {
@@ -81,20 +81,27 @@ export default class Foods extends React.Component {
           /* Default title when post has no title set */
           const defaultTitle = [<h1 key='title'>Untitled</h1>]
           return (
-            <div className='blog-post' data-wio-id={post.id} key={post.id}>
+            <a
+              className='blog-post'
+              data-wio-id={post.id}
+              key={post.id}
+              href={this.props.prismicCtx.linkResolver(post)}
+            >
               <h2>
                 {/* We render a link to a particular post using the linkResolver for the url and its title */}
-                <a href={this.props.prismicCtx.linkResolver(post)}>
+
                 <div className='home'>
                   <div className='blog-avatar' style={logo} />
                 </div>
-                </a>
-								<div className='info__container'>
-                <div className='generic__post__title'><h1>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1></div>
+
+                <div className='info__container'>
+                  <div className='generic__post__title'>
+                    <h1>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
+                  </div>
                   {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
                   {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
-									{RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}
-								</div>
+                  {RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}
+                </div>
               </h2>
               <p className='blog-post-meta'>
                 <time className='created-at'>
@@ -110,7 +117,7 @@ export default class Foods extends React.Component {
               </p>
               {/* Renders a small preview of the post's text */}
               {this.firstParagraph(post)}
-            </div>
+            </a>
           )
         })}
       </div>
@@ -132,7 +139,9 @@ export default class Foods extends React.Component {
     return (
       <div>
         <div className='previous'>
-          <a className='generic__previous-button' href='/'>HOME</a>
+          <a className='generic__previous-button' href='/'>
+            HOME
+          </a>
         </div>
       </div>
     )

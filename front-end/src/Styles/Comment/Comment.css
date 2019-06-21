@@ -1,55 +1,24 @@
-.comments {
-  margin: 200px 0px 0px 0px;
+.comment-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 100px;
 }
 
-.App {
-  padding-top: 200px 0px 0px 0px;
-}
-
-.App-logo {
-  height: 80px;
-}
-
-.Spin {
-  -webkit-animation: App-logo-spin infinite 2s linear;
-          animation: App-logo-spin infinite 2s linear;
-}
-
-.App-header {
-  text-align: center;
-  background-color: var(--secondary);
-  padding: 20px;
-  color: white;
-  border-radius: 0.3rem;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.comment-section__container {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 75%;
 }
 /*# sourceMappingURL=Comment.css.map */

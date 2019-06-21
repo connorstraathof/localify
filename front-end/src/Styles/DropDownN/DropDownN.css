@@ -1,0 +1,49 @@
+.dropdown__container {
+  padding: 100px 0px 0px 0px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border: solid 1px #f2f2f2;
+  padding: 5px;
+  margin: 0px 0px 0px 10px;
+  background-color: white;
+  color: black;
+  font-family: verdana;
+  width: 100px;
+}
+
+.content {
+  cursor: pointer;
+  border-left: solid 1px #f2f2f2;
+  border-right: solid 1px #f2f2f2;
+  border-bottom: solid 1px #f2f2f2;
+  border-radius: 0 0 5px 5px;
+  padding: 15px;
+  font-family: verdana;
+  font-size: 14px;
+  width: 100px;
+}
+
+.header__icon {
+  background: url(../../Assets/Icons/icons8-menu-vertical-100.png) no-repeat;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.horizontal-break {
+  border-top: 1px solid grey;
+  margin: 10px 0px;
+}
+/*# sourceMappingURL=DropDownN.css.map */
