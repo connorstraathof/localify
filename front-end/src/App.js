@@ -3,8 +3,9 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import 'firebase/auth'
 import Navigation from './Components/Navigation/Navigation'
-import Footer from './Components/Footer/Footer'
 import Home from './Components/Home/Home'
+import About from './Components/About/About'
+import Footer from './Components/Footer/Footer'
 // import SignUp from './Components/SignUp'
 import Grocery from './Components/ShopsAll/Grocery/Grocery'
 import Grocer from './Components/ShopsAll/Grocery/Grocer'
@@ -18,7 +19,7 @@ import Shops from './Components/ShopsAll/Shops/Shops'
 import Shop from './Components/ShopsAll/Shops/Shop'
 import Foods from './Components/ShopsAll/Food/Foods'
 import Food from './Components/ShopsAll/Food/Food'
-import NavSide from './Components/NavSide/NavSide'
+// import NavSide from './Components/NavSide/NavSide'
 // import NotFound from './Components/NotFound/NotFound'
 
 const App = props => (
@@ -29,6 +30,7 @@ const App = props => (
         <Redirect exact from='/blog/' to='/' />
         {/* <Route component={NotFound} /> */}
         <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
         <Route
           exact
           path='/artists'

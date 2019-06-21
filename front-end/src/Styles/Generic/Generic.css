@@ -563,12 +563,6 @@ footer a {
   }
 }
 
-.nav-side__main {
-  padding: 80px 0px 0px 10px;
-  height: 400px;
-  width: 150px;
-}
-
 .page__organizer {
   display: -webkit-box;
   display: -ms-flexbox;

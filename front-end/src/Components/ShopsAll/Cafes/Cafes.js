@@ -6,7 +6,6 @@ import { Helmet } from 'react-helmet'
 import Loader from '../../Tools/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
 import NavSide from '../../NavSide/NavSide'
-import LongBreak from '../../Tools/LongBreak/LongBreak'
 
 export default class BlogHome extends React.Component {
   constructor(props) {
@@ -154,9 +153,6 @@ export default class BlogHome extends React.Component {
           <div className='page__organizer'>
             <div className='nav-side__container'>
             <NavSide/>
-            </div>
-            <div>
-              <LongBreak/>
             </div>
             <div className='shops-side__container'>
               {this.blogHomeHead()}
