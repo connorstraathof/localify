@@ -1,5 +1,98 @@
-.join__container {
+// color pallette
+
+$grayDay : rgb(179, 179, 176);
+$whiteAlyssum : rgb(235, 231, 227);
+$blueLolite : rgb(26, 76, 139);
+$blueQuartz : rgb(39, 67, 116);
+$blackIris : rgb(56, 61, 77);
+$blueAmsterdam : rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// color pallette
+
+// font pallette
+
+@font-face {
+    font-family: Regular;
+    src: url('../../Assets/Fonts/Karla-Regular.ttf')
+}
+@font-face {
+    font-family: Bold;
+    src: url('../../Assets/Fonts/Karla-Bold.ttf')
+}
+@font-face {
+    font-family: Italic;
+    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+}
+
+// font pallette
+
+.join-page {
     display: flex;
     justify-content: center;
-    margin: 70px 0px;
+    width: 100%;
+    height: 700px;
+}
+.join-page__organizer {
+    display: flex;
+    flex-direction: column;
+}
+.join-header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 100px 0px 0px 0px;
+}
+.join-page__br {
+    border-top: 1px solid $grayDay;
+    width: 20%;
+    margin: 10px 0px 10px 0px;
+}
+.join-form__container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    height: 400px;
+    width: 100%;
+    padding: 20px;
+    border: $grayDay solid 1px;
+    border-radius: 5px;
+}
+
+// join form
+
+#main__container {
+    width: 100%;
+}
+#label {
+    width: 200px;
+    padding: 5px;
+}
+#form__rows {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+#form__submit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 20px;
+
+}
+#join-form__button {
+    background-color: white;
+    color: black;
+    font-family: $Regular;
+    border: $grayDay solid 1px;
+}
+#join-form__button:hover {
+    background-color: $blueAmsterdam;
+    color: white;
 }

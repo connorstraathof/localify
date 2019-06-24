@@ -22,9 +22,9 @@ class ModalExample extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.toggle} id='about__button'>RECOMMEND</Button>
+        <Button onClick={this.toggle} id='about-page__button-recommend'>RECOMMEND</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>RECOMMEND</ModalHeader>
+          <ModalHeader toggle={this.toggle}>RECOMMEND A BUSINESS TO US</ModalHeader>
           <ModalBody>
             <ModalForm/>
           </ModalBody>

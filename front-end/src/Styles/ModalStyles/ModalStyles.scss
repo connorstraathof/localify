@@ -57,36 +57,6 @@
 
 // search modal
 
-// join modal
-
-#join-button__container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0px 20px;
-  height: 38px;
-  width: 70px
-}
-.join__icon {
-  height: 20px;
-  width: 20px;
-  background: url(../../Assets/Icons/icons8-add-user-female-100.svg) no-repeat;
-  background-size: 20px;
-  margin: 0px 5px 0px 0px;
-}
-.btn.btn-secondary {
-  margin: 0px 5px;
-  padding: 0px
-}
-#join-modal__body {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-}
-#join-modal__header {
-  background: white;
-}
 
 
 @media (min-width: 576px) {
@@ -96,3 +66,5 @@
 }
 
 // join modal
+
+

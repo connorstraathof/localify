@@ -1,10 +1,9 @@
 import React from 'react'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import DropDown from '../../Tools/DropDown/DropDown'
+import ExploreModal from '../../Tools/Modals/ExploreModal/ExploreModal'
 import '../../../Styles/Navigation/Navigation.css'
 import '../../../Styles/About/About.css'
-import SearchModal from '../../Searchs/SearchModal/SearchModal'
-import JoinModal from '../../Tools/Modals/JoinModal/JoinModal'
+import SearchModal from '../../Tools/Modals/SearchModal/SearchModal'
 import { Button } from 'reactstrap';
 
 
@@ -17,14 +16,17 @@ export default class Navigation extends React.Component {
           <NavbarBrand href='/' className='mr-auto'>
             LOCALIFY
           </NavbarBrand>
-          <Button id='about__link' href='/about'>
+          <Button id='nav__button' href='/about'>
             <div className='about__logo'/>
-            ABOUT
+            <div className='nav__button-title'>ABOUT</div>
             </Button>
           <div className='nav-break'/>
-          <DropDown />
+          <ExploreModal />
           <div className='nav-break'/>
-          <JoinModal/>
+          <Button id='nav__button' href='/join'>
+            <div className='join__logo'/>
+            <div className='nav__button-title'>JOIN</div>
+          </Button>
           <div className='nav-break'/>
           <SearchModal />
           <div id='content' />

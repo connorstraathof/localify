@@ -1,27 +1,16 @@
-#about__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-decoration: none;
-  margin: 0px 15px;
-  padding: 5px;
+@font-face {
+  font-family: Regular;
+  src: url("../../Assets/Fonts/Karla-Regular.ttf");
 }
 
-.about__logo {
-  background: url(../../Assets/Icons/icons8-help-100.png) no-repeat;
-  background-size: 20px;
-  height: 20px;
-  width: 20px;
-  margin: 0px 5px 0px 0px;
+@font-face {
+  font-family: Bold;
+  src: url("../../Assets/Fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: Italic;
+  src: url("../../Assets/Fonts/Karla-Italic.ttf");
 }
 
 .about {
@@ -42,6 +31,11 @@
   height: 600px;
 }
 
+.about__header {
+  font-family: Bold;
+  font-size: 20px;
+}
+
 .about__break-upper {
   border-top: 1px solid grey;
   width: 100px;
@@ -59,6 +53,10 @@
   padding: 40px;
 }
 
+.about__paragraph {
+  font-family: Regular;
+}
+
 .about__break {
   border-top: 1px solid grey;
 }
@@ -70,26 +68,43 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 40px;
+  width: 100%;
+  margin: 0px;
 }
 
-#about__button {
+#about-page__button-recommend {
+  font-family: Regular;
   background-color: white;
-  margin: 10px;
-  border-radius: 5px;
+  color: black;
+  margin: 10px 0px 0px 10px;
 }
 
-#about__button:hover {
-  background-color: #4242ff;
+#about-page__button-donate {
+  font-family: Regular;
+  background-color: white;
+  color: black;
+  margin: 10px 0px 0px 0px;
+}
+
+#about-page__button-recommend:hover {
+  background-color: #004b87;
+  color: white;
+}
+
+#about-page__button-donate:hover {
+  background-color: #004b87;
   color: white;
 }
 
 #recommend-modal__button {
   background-color: white;
   color: black;
+  border: 1px solid #b3b3b0;
 }
 
 #recommend-modal__button:hover {
-  background-color: #4242ff;
+  background-color: #004b87;
   color: white;
 }
 /*# sourceMappingURL=About.css.map */

@@ -1,74 +1,102 @@
-#about__link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    text-decoration: none;
-    margin: 0px 15px;
-    padding: 5px;
+// color pallette
+
+$grayDay : rgb(179, 179, 176);
+$whiteAlyssum : rgb(235, 231, 227);
+$blueLolite : rgb(26, 76, 139);
+$blueQuartz : rgb(39, 67, 116);
+$blackIris : rgb(56, 61, 77);
+$blueAmsterdam : rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// color pallette
+
+// font pallette
+
+@font-face {
+    font-family: Regular;
+    src: url('../../Assets/Fonts/Karla-Regular.ttf')
 }
-.about__logo {
-    background: url(../../Assets/Icons/icons8-help-100.png) no-repeat;
-    background-size: 20px;
-    height: 20px;
-    width: 20px;
-    margin: 0px 5px 0px 0px;
+@font-face {
+    font-family: Bold;
+    src: url('../../Assets/Fonts/Karla-Bold.ttf')
 }
+@font-face {
+    font-family: Italic;
+    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+}
+
+// font pallette
+
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-width: 100%;
-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
 }
 .about__header {
-
+  font-family: $Bold;
+  font-size: 20px;
 }
 .about__break-upper {
-    border-top: 1px solid grey;
-    width: 100px;
-    margin: 20px 0px;
+  border-top: 1px solid grey;
+  width: 100px;
+  margin: 20px 0px;
 }
 .about__container {
-border: 1px solid black;
-border-radius: 5px;
-height: 350px;
-width: 75%;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 350px;
+  width: 75%;
 }
 .about__paragraphs {
-    padding: 40px;
+  padding: 40px;
 }
-.about__paragraph1 {
-
+.about__paragraph {
+font-family: $Regular;
 }
-
 .about__break {
-    border-top: 1px solid grey;
-
+  border-top: 1px solid grey;
 }
 .about__button-container {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  width: 100%;
+  margin: 0px;
 }
-#about__button {
-    background-color: white;
-    margin: 10px;
-    border-radius: 5px;
+#about-page__button-recommend {
+  font-family: $Regular;
+  background-color: white;
+  color: black;
+  margin: 10px 0px 0px 10px;
 }
-#about__button:hover {
-    background-color: rgb(66, 66, 255);
-    color: white;
+#about-page__button-donate {
+  font-family: $Regular;
+  background-color: white;
+  color: black;
+  margin: 10px 0px 0px 0px;
 }
-
+#about-page__button-recommend:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}
+#about-page__button-donate:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}
 
 // modal
 
 #recommend-modal__button {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
+  border: 1px solid $grayDay;
 }
 #recommend-modal__button:hover {
-    background-color: rgb(66, 66, 255);
-    color: white;  
+  background-color: $blueAmsterdam;
+  color: white;
 }

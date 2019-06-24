@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Regular;
+  src: url("../../Assets/Fonts/Karla-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bold;
+  src: url("../../Assets/Fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: Italic;
+  src: url("../../Assets/Fonts/Karla-Italic.ttf");
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,12 +105,12 @@
 }
 
 .footer-br {
-  border-left: 1px solid black;
+  border-left: 1px solid #b3b3b0;
   margin: 0px 10px;
-  height: 16px;
+  height: 40px;
 }
 
-.footer__contact {
+#footer__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,6 +122,15 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #b3b3b0;
+  font-family: Regular;
+}
+
+#footer__button:hover {
+  background-color: #004b87;
+  color: white;
 }
 
 .footer__contact-logo {
@@ -114,22 +138,6 @@
   height: 20px;
   width: 20px;
   background-size: 20px;
-}
-
-.footer__help {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  padding: 10px;
 }
 
 .footer__help-logo {
@@ -147,6 +155,17 @@
       align-content: center;
 }
 
+#help-modal__button {
+  background-color: white;
+  color: black;
+  border: 1px solid #b3b3b0;
+}
+
+#help-modal__button:hover {
+  background-color: #004b87;
+  color: white;
+}
+
 .footer__help-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,11 +176,11 @@
           flex-direction: row;
 }
 
-.footer__input__title {
+.help__input__title {
   margin: 0px 10px 0px 0px;
 }
 
-.footer__input {
+.help__input {
   width: 600px;
   height: 150px;
 }
@@ -174,6 +193,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.contact__questions {
+  margin: 0px 10px 0px 0px;
 }
 
 .footer__contact-email {

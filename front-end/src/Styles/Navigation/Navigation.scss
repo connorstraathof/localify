@@ -1,14 +1,97 @@
+// styles
+
+$grayDay: rgb(179, 179, 176);
+$whiteAlyssum: rgb(235, 231, 227);
+$blueLolite: rgb(26, 76, 139);
+$blueQuartz: rgb(39, 67, 116);
+$blackIris: rgb(56, 61, 77);
+$blueAmsterdam: rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// styles
+
+// font pallette
+
+@font-face {
+  font-family: Regular;
+  src: url('../../Assets/Fonts/Karla-Regular.ttf');
+}
+@font-face {
+  font-family: Bold;
+  src: url('../../Assets/Fonts/Karla-Bold.ttf');
+}
+@font-face {
+  font-family: Italic;
+  src: url('../../Assets/Fonts/Karla-Italic.ttf');
+}
+
+// font pallette
+
 .navbar.navbar-light.bg-faded {
-    border-bottom: 1px solid rgb(190, 190, 190);
-    z-index: 1000;
-    position: fixed;
-    background-color: white;
-    width: 100%;
+  border-bottom: 1px solid rgb(190, 190, 190);
+  z-index: 1000;
+  position: fixed;
+  background-color: white;
+  width: 100%;
 }
 .navbar {
-    margin: 0px 0px 50px 0px;
+  margin: 0px 0px 50px 0px;
 }
 .nav-break {
-    border-left: 1px solid black;
-    height: 30px;
+  border-left: 1px solid black;
+  height: 30px;
+  margin: 0px 10px;
 }
+
+// NAV BUTTONS
+
+#nav__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 130px;
+  background-color: white;
+  color: black;
+}
+#nav__button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}
+
+.explore-modal__logo {
+  background: url(../../Assets/Icons/icons8-compass.svg) no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0px 2px;
+}
+.search-modal__logo {
+  background: url(../../Assets/Icons/search.svg) no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0px 2px;
+}
+.join__logo {
+  background: url(../../Assets/Icons/icons8-add-user-female-100.svg) no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0px 2px;
+}
+
+.about__logo {
+  background: url(../../Assets/Icons/icons8-info.svg) no-repeat;
+  background-size: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 0px 2px;
+}
+.nav__button-title {
+  font-family: $Bold;
+}
+// NAV BUTTONS

@@ -1,27 +1,24 @@
 import React from 'react'
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
-import '../../../Styles/JoinForm/JoinForm.css'
+import '../../../Styles/Join/Join.css'
 
 export default class Example extends React.Component {
   render() {
     return (
       <Form id='main__container'>
-        <div id='form__row'>
-          <FormGroup id='form__row'>
-            <Label id='label' for='exampleEmail' sm={2}>
+          <FormGroup id='form__rows'>
+            <Label id='label' >
               Email
             </Label>
-            <Col sm={10}>
+            <Col >
               <Input type='email' name='email' placeholder='johndoe@example.com' />
             </Col>
           </FormGroup>
-        </div>
-        <div id='form__row'>
-          <FormGroup id='form__row'>
-            <Label id='label' for='exampleSelect' sm={2}>
+          <FormGroup id='form__rows'>
+            <Label id='label' >
               Company Type
             </Label>
-            <Col sm={10}>
+            <Col >
               <Input type='select' name='select' placeholder='company type'>
                 <option value='artist'>ARTIST</option>
                 <option value='artisan'>ARTISAN</option>
@@ -32,21 +29,18 @@ export default class Example extends React.Component {
               </Input>
             </Col>
           </FormGroup>
-        </div>
-        <div id='form__row'>
-          <FormGroup id='form__row'>
-            <Label id='label' for='exampleText' sm={2}>
+          <FormGroup id='form__rows'>
+            <Label id='label' >
               Description
             </Label>
-            <Col sm={10}>
+            <Col>
               <Input type='textarea' name='text' placeholder='Tell us about yourself...' />
             </Col>
           </FormGroup>
-        </div>
         <div id='form__submit'>
           <FormGroup >
-            <Col sm={{ size: 10, offset: 2 }}>
-              <Button id='form__s-button'>Submit</Button>
+            <Col>
+              <Button id='join-form__button'>Submit</Button>
             </Col>
           </FormGroup>
         </div>

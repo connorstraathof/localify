@@ -1,10 +1,120 @@
-.join__container {
+@font-face {
+  font-family: Regular;
+  src: url("../../Assets/Fonts/Karla-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bold;
+  src: url("../../Assets/Fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: Italic;
+  src: url("../../Assets/Fonts/Karla-Italic.ttf");
+}
+
+.join-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 70px 0px;
+  width: 100%;
+  height: 700px;
+}
+
+.join-page__organizer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.join-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 100px 0px 0px 0px;
+}
+
+.join-page__br {
+  border-top: 1px solid #b3b3b0;
+  width: 20%;
+  margin: 10px 0px 10px 0px;
+}
+
+.join-form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px 0px 0px 0px;
+  height: 400px;
+  width: 100%;
+  padding: 20px;
+  border: #b3b3b0 solid 1px;
+  border-radius: 5px;
+}
+
+#main__container {
+  width: 100%;
+}
+
+#label {
+  width: 200px;
+  padding: 5px;
+}
+
+#form__rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#form__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 20px;
+}
+
+#join-form__button {
+  background-color: white;
+  color: black;
+  font-family: Regular;
+  border: #b3b3b0 solid 1px;
+}
+
+#join-form__button:hover {
+  background-color: #004b87;
+  color: white;
 }
 /*# sourceMappingURL=Join.css.map */

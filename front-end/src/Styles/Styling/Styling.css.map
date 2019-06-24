@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAgBA,UAAU;EACN,WAAW,EAAE,OAAO;EACpB,GAAG,EAAE,2CAA2C;;;AAEpD,UAAU;EACN,WAAW,EAAE,IAAI;EACjB,GAAG,EAAE,wCAAwC;;;AAEjD,UAAU;EACN,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,0CAA0C",
+    "sources": [
+        "Styling.scss"
+    ],
+    "names": [],
+    "file": "Styling.css"
+}

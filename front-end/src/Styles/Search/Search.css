@@ -12,12 +12,6 @@
   width: 50px;
 }
 
-.navsearch__logo {
-  background: url("../../Assets/Icons/search.svg") no-repeat;
-  height: 30px;
-  width: 30px;
-}
-
 .search__container__two {
   display: -webkit-box;
   display: -ms-flexbox;

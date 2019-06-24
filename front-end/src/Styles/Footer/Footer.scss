@@ -1,3 +1,34 @@
+// color pallette
+
+$grayDay : rgb(179, 179, 176);
+$whiteAlyssum : rgb(235, 231, 227);
+$blueLolite : rgb(26, 76, 139);
+$blueQuartz : rgb(39, 67, 116);
+$blackIris : rgb(56, 61, 77);
+$blueAmsterdam : rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// color pallette
+
+// font pallette
+
+@font-face {
+    font-family: Regular;
+    src: url('../../Assets/Fonts/Karla-Regular.ttf')
+}
+@font-face {
+    font-family: Bold;
+    src: url('../../Assets/Fonts/Karla-Bold.ttf')
+}
+@font-face {
+    font-family: Italic;
+    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+}
+
+// font pallette
+
 .footer {
   display: flex;
   justify-content: center;
@@ -49,28 +80,29 @@
   width: 200px;
 }
 .footer-br {
-  border-left: 1px solid black;
+  border-left: 1px solid $grayDay;
   margin: 0px 10px;
-  height: 16px;
+  height: 40px;
 }
-.footer__contact {
+#footer__button {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid $grayDay;
+  font-family: $Regular;
+}
+#footer__button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
 }
 .footer__contact-logo {
   background: url('../../Assets/Icons/icons8-contact-info-100.png') no-repeat;
   height: 20px;
   width: 20px;
   background-size: 20px;
-}
-.footer__help {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  padding: 10px;
 }
 .footer__help-logo {
   background: url('../../Assets/Icons/icons8-mandatory-100.png') no-repeat;
@@ -85,26 +117,40 @@
   align-content: center;
 
 }
-// footer modals
 
+// footer help modal
+
+#help-modal__button {
+  background-color: white;
+  color: black;
+  border: 1px solid $grayDay;
+}
+#help-modal__button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}
 .footer__help-input {
   display: flex;
   flex-direction: row;
 }
-.footer__input__title {
+.help__input__title {
   margin: 0px 10px 0px 0px;
 }
-.footer__input {
+.help__input {
   width: 600px;
   height: 150px;
 }
+// footer help modal
 
+// footer contact modal
 
 .footer__contact-input {
   display: flex;
   flex-direction: row;
 }
-
+.contact__questions {
+  margin: 0px 10px 0px 0px;
+}
 .footer__contact-email {
   text-decoration: none;
   width: 100px;

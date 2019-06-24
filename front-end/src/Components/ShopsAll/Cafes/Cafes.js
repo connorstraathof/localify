@@ -5,7 +5,6 @@ import Prismic from 'prismic-javascript'
 import { Helmet } from 'react-helmet'
 import Loader from '../../Tools/Loaders/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
-import DropDownSide from '../../DropDown/DropDown'
 
 export default class BlogHome extends React.Component {
   constructor(props) {
@@ -155,16 +154,9 @@ export default class BlogHome extends React.Component {
           <Helmet>
             <title>{RichText.asText(this.state.doc.data.headline)}</title>
           </Helmet>
-          <div className='page__organizer'>
-            <div className='nav-side__container'>
-              <DropDownSide />
-            </div>
-            <div className='shops-side__container'>
               {this.blogHomeHead()}
               {this.goBack()}
               {this.blogPostsSection()}
-            </div>
-          </div>
         </div>
       )
     } else if (this.state.notFound) {
