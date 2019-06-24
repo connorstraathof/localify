@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import DonateForm from './ModalDF'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input } from 'reactstrap'
 import '../../Styles/About/About.css'
 
 class ModalExample extends React.Component {
@@ -19,6 +18,25 @@ class ModalExample extends React.Component {
     }));
   }
 
+  modalForm() {
+    return(
+      <Form>
+      <FormGroup>
+        <Label>Full Name</Label>
+        <Input placeholder="Type your full name.." />
+      </FormGroup>
+      <FormGroup>
+        <Label>Amount</Label>
+        <Input placeholder="Amount you wish to donate.." />
+      </FormGroup>
+      <FormGroup>
+        <Label for="exampleText">Note</Label>
+        <Input placeholder='Notes about your donation..' />
+      </FormGroup>
+    </Form>
+    )
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +44,7 @@ class ModalExample extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>DONATE</ModalHeader>
           <ModalBody>
-              <DonateForm/>
+              {this.modalForm()}
           </ModalBody>
           <ModalFooter>
             <Button id='recommend-modal__button' color="primary" onClick={this.toggle}>SUBMIT</Button>

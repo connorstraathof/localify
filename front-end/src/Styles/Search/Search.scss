@@ -1,3 +1,34 @@
+// color pallette
+
+$grayDay : rgb(179, 179, 176);
+$whiteAlyssum : rgb(235, 231, 227);
+$blueLolite : rgb(26, 76, 139);
+$blueQuartz : rgb(39, 67, 116);
+$blackIris : rgb(56, 61, 77);
+$blueAmsterdam : rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// color pallette
+
+// font pallette
+
+@font-face {
+    font-family: Regular;
+    src: url('../../Assets/Fonts/Karla-Regular.ttf')
+}
+@font-face {
+    font-family: Bold;
+    src: url('../../Assets/Fonts/Karla-Bold.ttf')
+}
+@font-face {
+    font-family: Italic;
+    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+}
+
+// font pallette
+
 //nav search
 .navsearch__container {
   display: flex;
@@ -115,11 +146,12 @@
   margin: 10px;
   height: 100px;
   width: 200px;
-  border: 1px solid black;
+  border: 1px solid $grayDay;
+  color: black;
   border-radius: 5px;
 }
 .active, .search__shops:hover {
-  background-color: rgb(8, 30, 155);
+  background-color: $blueAmsterdam;
   color: white;
   text-decoration: none;
 }

@@ -33,13 +33,14 @@ $Italic: Italic;
   display: flex;
   justify-content: center;
   width: 100%;
+  border-top: 1px solid $grayDay;
+  background-color: white;
 }
 .footer__container {
   display: flex;
   flex-direction: row;
-  border-top: 1px solid grey;
   width: 75%;
-  height: 200px;
+  height: 100px;
 }
 .footer__left {
   display: flex;

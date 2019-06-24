@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Regular;
+  src: url("../../Assets/Fonts/Karla-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bold;
+  src: url("../../Assets/Fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: Italic;
+  src: url("../../Assets/Fonts/Karla-Italic.ttf");
+}
+
 .navsearch__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,12 +207,13 @@
   margin: 10px;
   height: 100px;
   width: 200px;
-  border: 1px solid black;
+  border: 1px solid #b3b3b0;
+  color: black;
   border-radius: 5px;
 }
 
 .active, .search__shops:hover {
-  background-color: #081e9b;
+  background-color: #004b87;
   color: white;
   text-decoration: none;
 }

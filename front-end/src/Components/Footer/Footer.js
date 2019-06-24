@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../Styles/Footer/Footer.css'
-import HelpModal from './HelpModal'
-import ContactModal from './ContactModal'
+import HelpModal from '../Tools/Modals/Help'
+import ContactModal from '../Tools/Modals/Contact'
 
 class Footer extends React.Component {
   render() {

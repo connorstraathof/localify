@@ -49,6 +49,14 @@ $Italic: Italic;
     border-radius: 5px;
     margin: 100px 0px 0px 0px;
 }
+.join-header__title {
+    font-family: $Bold;
+    font-size: 20px;
+}
+.join-header-text {
+    font-family: $Regular;
+    margin: 0px;
+}
 .join-page__br {
     border-top: 1px solid $grayDay;
     width: 20%;

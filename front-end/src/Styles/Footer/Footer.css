@@ -21,6 +21,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  border-top: 1px solid #b3b3b0;
+  background-color: white;
 }
 
 .footer__container {
@@ -31,9 +33,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-top: 1px solid grey;
   width: 75%;
-  height: 200px;
+  height: 100px;
 }
 
 .footer__left {
