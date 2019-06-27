@@ -77,7 +77,7 @@ export default class Drink extends React.Component {
           <div className='outer-container'>
             <div className='backup__container'>
               <div className='back'>
-                <a href='/drinks'>back to list</a>
+                <a id='shop__back' href='/drinks'>BACK</a>
               </div>
               {this.logo()}
               <div className='info__container'>

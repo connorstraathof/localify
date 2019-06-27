@@ -77,7 +77,7 @@ export default class Grocer extends React.Component {
           <div className='outer-container'>
             <div className='backup__container'>
               <div className='back'>
-                <a href='/grocery'>back to list</a>
+                <a id='shop__back' href='/grocery'>BACK</a>
               </div>
               {this.logo()}
               <div className='info__container'>

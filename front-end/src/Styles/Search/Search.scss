@@ -50,6 +50,7 @@ $Italic: Italic;
 }
 
 .search__shops {
+  font-family: $Regular;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +72,7 @@ $Italic: Italic;
 }
 
 .searchbar {
+  font-family: $Regular;
   float: right;
   background-color: rgb(255, 255, 255);
   color: black;
@@ -79,7 +81,6 @@ $Italic: Italic;
   border: none;
   margin-top: 1px;
   margin-right: 8px;
-  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
   font-size: 1em;
   font-weight: bold;
   border-bottom: black solid 2px;
@@ -88,7 +89,7 @@ $Italic: Italic;
 
 .searchbar::placeholder {
   color: black;
-  font-family: 'Segoe UI Light', 'Segoe UI', 'Segoe', Tahoma, Helvetica, Arial, sans-serif;
+  font-family: $Regular;
   font-size: 1em;
   font-weight: bold;
   /* transition: 0.2s; */
@@ -166,4 +167,18 @@ $Italic: Italic;
 .search__shop-name {
   text-decoration: none;
   font-size: 13px;
+}
+
+// search popover button
+
+#popover-button {
+  font-family: $Regular;
+  background-color: white;
+  color: black;
+  border: 1px solid $grayDay;
+}
+
+#popover-button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
 }

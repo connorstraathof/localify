@@ -156,7 +156,7 @@ const Shops = [
   {
     id: '25',
     name: 'The Federal Store',
-    area: 'Mount Pleasant Federalf Main Grocery',
+    area: 'Mount Pleasant Federal Main Grocery',
     route: '/grocery/10'
   }
 ]

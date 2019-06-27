@@ -63,7 +63,7 @@ class Home extends React.Component {
     )
   }
   scroller() {
-    return(
+    return (
       <div className='scroll__container'>
         <button onClick={() => scroll.scrollMore(700)} className='suggestions'>
           SUGGESTIONS
@@ -79,9 +79,13 @@ class Home extends React.Component {
       // this.state.isLoading ? <Loader2/> :
       <div>
         <div className='home__container__one'>
+          <div className='home__organizers'>
           <div className='organizer__one'>
             <h4 className='home__title'>LOCALIFY VANCOUVER</h4>
-            {this.scroller()}
+          </div>
+          <div className='organizer__two'>
+          {this.scroller()}
+          </div>
           </div>
         </div>
         <div className='home__container__two'>

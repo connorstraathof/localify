@@ -79,7 +79,6 @@ export default class Foods extends React.Component {
           /* Store the date as a Date object so we can format it to whatever we need */
           let postDate = Date(post.data.date)
           /* Default title when post has no title set */
-          const defaultTitle = [<h1 key='title'>Untitled</h1>]
           return (
             <a
               className='blog-post'
@@ -138,7 +137,7 @@ export default class Foods extends React.Component {
   goBack() {
     return (
       <div>
-        <div className='previous'>
+        <div className='previous__container'>
           <a className='generic__previous-button' href='/'>
             HOME
           </a>

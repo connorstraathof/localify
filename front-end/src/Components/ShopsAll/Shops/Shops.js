@@ -79,7 +79,6 @@ export default class Shops extends React.Component {
           /* Store the date as a Date object so we can format it to whatever we need */
           let postDate = Date(post.data.date)
           /* Default title when post has no title set */
-          const defaultTitle = [<h1 key='title'>Untitled</h1>]
           return (
             <a
               className='blog-post'

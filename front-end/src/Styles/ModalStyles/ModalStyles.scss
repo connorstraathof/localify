@@ -1,3 +1,35 @@
+// color pallette
+
+$grayDay : rgb(179, 179, 176);
+$whiteAlyssum : rgb(235, 231, 227);
+$blueLolite : rgb(26, 76, 139);
+$blueQuartz : rgb(39, 67, 116);
+$blackIris : rgb(56, 61, 77);
+$blueAmsterdam : rgb(0, 75, 135);
+$Regular: Regular;
+$Bold: Bold;
+$Italic: Italic;
+
+// color pallette
+
+// font pallette
+
+@font-face {
+    font-family: Regular;
+    src: url('../../Assets/Fonts/Karla-Regular.ttf')
+}
+@font-face {
+    font-family: Bold;
+    src: url('../../Assets/Fonts/Karla-Bold.ttf')
+}
+@font-face {
+    font-family: Italic;
+    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+}
+
+// font pallette
+
+
 // about modal
 
 #modal__button {
@@ -37,22 +69,28 @@
   margin: 0px 2px 0px 2px;
 }
 #search-modal__header {
+  font-family: $Bold;
   background: white;
-}
-#search-modal__body {
 }
 #search-modal__footer {
   background: white;
   padding: 15px 5px;
 }
 #search-modal__footer__button {
+  font-family: $Regular;
+  background-color: white;
+  color: black;
   display: flex;
   justify-content: center;
   justify-items: center;
   height: 30px;
   width: 70px;
   padding: 5px 5px 10px 5px;
-  margin: 0px;
+  margin: 0px 15px 0px 0px;
+}
+#search-modal__footer__button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
 }
 
 // search modal
@@ -67,4 +105,43 @@
 
 // join modal
 
+// explore modal 
 
+#explore-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+#explore-cards__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  width: 130px;
+  background-color: white;
+  color: black;
+  margin: 0px;
+}
+#explore-cards__card:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}
+#explore-cards__card-title {
+  font-family: $Bold;
+}
+.explore-modal__header-title {
+  font-family: $Bold;
+  font-size: 20px;
+}
+.explore-modal__header-description {
+  font-family: $Regular;
+  font-size: 18px;
+}
+#explore-modal__cancel-button {
+  font-family: $Regular;
+  background-color: white;
+  color: black;
+}
+#explore-modal__cancel-button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+}

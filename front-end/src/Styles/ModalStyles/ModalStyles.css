@@ -1,3 +1,18 @@
+@font-face {
+  font-family: Regular;
+  src: url("../../Assets/Fonts/Karla-Regular.ttf");
+}
+
+@font-face {
+  font-family: Bold;
+  src: url("../../Assets/Fonts/Karla-Bold.ttf");
+}
+
+@font-face {
+  font-family: Italic;
+  src: url("../../Assets/Fonts/Karla-Italic.ttf");
+}
+
 #modal__button {
   background-color: white;
   color: black;
@@ -47,6 +62,7 @@
 }
 
 #search-modal__header {
+  font-family: Bold;
   background: white;
 }
 
@@ -56,6 +72,9 @@
 }
 
 #search-modal__footer__button {
+  font-family: Regular;
+  background-color: white;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,12 +85,72 @@
   height: 30px;
   width: 70px;
   padding: 5px 5px 10px 5px;
-  margin: 0px;
+  margin: 0px 15px 0px 0px;
+}
+
+#search-modal__footer__button:hover {
+  background-color: #004b87;
+  color: white;
 }
 
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 80%;
   }
+}
+
+#explore-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#explore-cards__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 130px;
+  width: 130px;
+  background-color: white;
+  color: black;
+  margin: 0px;
+}
+
+#explore-cards__card:hover {
+  background-color: #004b87;
+  color: white;
+}
+
+#explore-cards__card-title {
+  font-family: Bold;
+}
+
+.explore-modal__header-title {
+  font-family: Bold;
+  font-size: 20px;
+}
+
+.explore-modal__header-description {
+  font-family: Regular;
+  font-size: 18px;
+}
+
+#explore-modal__cancel-button {
+  font-family: Regular;
+  background-color: white;
+  color: black;
+}
+
+#explore-modal__cancel-button:hover {
+  background-color: #004b87;
+  color: white;
 }
 /*# sourceMappingURL=ModalStyles.css.map */
