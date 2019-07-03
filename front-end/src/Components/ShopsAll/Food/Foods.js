@@ -93,13 +93,23 @@ export default class Foods extends React.Component {
                   <div className='blog-avatar' style={logo} />
                 </div>
 
+
                 <div className='info__container'>
-                  <div className='generic__post__title'>
-                    <h1>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
+                  <div >
+                    <h1 id='generic__post__title'>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
                   </div>
+                  <div id='generic__post__shops-description'>
                   {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
+                  </div>
+                  <div className='generic__post__contact-info'>
+                    <div className='generic__post__contact-info__one'>
                   {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
+                  </div>
+                  <div className='generic__post__contact-info__break'/>
+                  <div className='generic__post__contact-info__one'>
                   {RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}
+                  </div>
+                  </div>
                 </div>
               </h2>
               <p className='blog-post-meta'>

@@ -105,12 +105,6 @@
   width: 200px;
 }
 
-.footer-br {
-  border-left: 1px solid #b3b3b0;
-  margin: 0px 10px;
-  height: 40px;
-}
-
 #footer__button {
   display: -webkit-box;
   display: -ms-flexbox;

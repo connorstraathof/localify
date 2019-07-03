@@ -7,12 +7,11 @@ import {
   Row,
   Col,
   Modal,
-  ModalHeader,
   ModalBody,
   ModalFooter
 } from 'reactstrap'
 import { animateScroll as scroll } from 'react-scroll'
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react'
+import {  GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react'
 import '../../Styles/Map/Map.css'
 import CurrentLocation from '../../Map'
 // import Map from '../Maps/Map/index'
@@ -175,6 +174,7 @@ class Home extends React.Component {
     return (
       // this.state.isLoading ? <Loader2/> :
       <div>
+        <div className='home__container'>
         <div className='home__container__one'>
           <div className='home__organizers'>
             <div className='organizer__one'>
@@ -182,6 +182,7 @@ class Home extends React.Component {
             </div>
             <div className='organizer__two'>{this.scroller()}</div>
           </div>
+        </div>
         </div>
         <div className='home__container__two'>
           <div className='suggestions-header__br' />

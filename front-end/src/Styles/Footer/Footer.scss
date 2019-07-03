@@ -1,11 +1,11 @@
 // color pallette
 
-$grayDay : rgb(179, 179, 176);
-$whiteAlyssum : rgb(235, 231, 227);
-$blueLolite : rgb(26, 76, 139);
-$blueQuartz : rgb(39, 67, 116);
-$blackIris : rgb(56, 61, 77);
-$blueAmsterdam : rgb(0, 75, 135);
+$grayDay: rgb(179, 179, 176);
+$whiteAlyssum: rgb(235, 231, 227);
+$blueLolite: rgb(26, 76, 139);
+$blueQuartz: rgb(39, 67, 116);
+$blackIris: rgb(56, 61, 77);
+$blueAmsterdam: rgb(0, 75, 135);
 $Regular: Regular;
 $Bold: Bold;
 $Italic: Italic;
@@ -15,16 +15,16 @@ $Italic: Italic;
 // font pallette
 
 @font-face {
-    font-family: Regular;
-    src: url('../../Assets/Fonts/Karla-Regular.ttf')
+  font-family: Regular;
+  src: url('../../Assets/Fonts/Karla-Regular.ttf');
 }
 @font-face {
-    font-family: Bold;
-    src: url('../../Assets/Fonts/Karla-Bold.ttf')
+  font-family: Bold;
+  src: url('../../Assets/Fonts/Karla-Bold.ttf');
 }
 @font-face {
-    font-family: Italic;
-    src: url('../../Assets/Fonts/Karla-Italic.ttf')
+  font-family: Italic;
+  src: url('../../Assets/Fonts/Karla-Italic.ttf');
 }
 
 // font pallette
@@ -80,11 +80,6 @@ $Italic: Italic;
   height: 20px;
   width: 200px;
 }
-.footer-br {
-  border-left: 1px solid $grayDay;
-  margin: 0px 10px;
-  height: 40px;
-}
 #footer__button {
   display: flex;
   flex-direction: row;
@@ -116,7 +111,6 @@ $Italic: Italic;
   font-size: 16px;
   height: 20px;
   align-content: center;
-
 }
 
 // footer help modal

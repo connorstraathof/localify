@@ -115,6 +115,11 @@ h1 {
   margin: auto;
 }
 
+.blog-title {
+  font-size: 35px;
+  font-family: Bold;
+}
+
 .blog-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,12 +140,12 @@ h1 {
 }
 
 .home .blog-description {
-  font-size: 18px;
-  color: #9A9A9A;
+  font-size: 25px;
+  color: #b3b3b0;
   line-height: 30px;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  font-family: 'Lato', sans-serif;
+  font-family: Regular;
   border-bottom: 1px solid #DADADA;
 }
 
@@ -286,8 +291,32 @@ h1 {
 }
 
 #generic__post__title {
-  font-size: 30px;
+  font-size: 55px;
   font-family: Bold;
+}
+
+#generic__post__shops-description {
+  font-size: 13px;
+}
+
+.generic__post__contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.generic__post__contact-info__one {
+  margin: 0px;
+}
+
+.generic__post__contact-info__break {
+  border-left: 1px solid #b3b3b0;
+  margin: 0px 10px;
+  height: 12px;
 }
 
 #backup__container {
