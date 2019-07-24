@@ -44,7 +44,17 @@ class Home extends React.Component {
       activeMarker: {},
       selectedPlace: {},
       stores: [{ name: 'libra room', latitude: 49.271157, longitude: -123.069342 },
-      {name: 'ME', latitude: 37.515491, longitude: 127.019452}
+      {name:'the Emerald', latitude:49.280664, longitude:-123.097446},
+      {name:'the Diamond', latitude:49.283358, longitude:-123.104006},
+      {name:'33 Acres', latitude:49.264112, longitude:-123.105328},
+      {name:'DD Mau', latitude:49.282243, longitude:-123.101125},
+      {name:'Pepinos', latitude:49.279082, longitude:-123.070617},
+      {name:'Down Low', latitude:49.276579, longitude:-123.069678},
+      {name:'Como Taperia', latitude:49.264971, longitude:-123.100688},
+      {name:'the Block', latitude:49.284118, longitude:-123.109990},
+      {name:'Milano coffee', latitude:49.263926, longitude:-123.108736},
+      {name:'JJ Bean', latitude:49.264976, longitude:-123.069420},
+      {name:'the Federal', latitude:49.261917, longitude:-123.103182}
     ]
     }
     this.toggle = this.toggle.bind(this)
@@ -100,7 +110,7 @@ class Home extends React.Component {
   homeMapModal() {
     return (
       <div>
-        <Button onClick={this.toggle}>MAP</Button>
+        <Button id='home-map__modal-button' onClick={this.toggle}>MAP</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalBody>{this.bigMap()}</ModalBody>
           <ModalFooter>

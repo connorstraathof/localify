@@ -154,3 +154,37 @@ $Italic: Italic;
 .footer__contact-link {
   text-decoration: none;
 }
+
+// MQ
+
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .footer {
+    height: 150px;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    height: 100px;
+  } 
+  .footer__left {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .footer__legal {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 0px 10px 0px;
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 1199px) {
+   
+}
+
+@media screen and (min-width: 1200px) {
+
+}

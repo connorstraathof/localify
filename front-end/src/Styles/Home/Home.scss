@@ -75,7 +75,7 @@ $Italic: Italic;
   height: 75px;
   width: 300px;
   border: 1px solid white;
-  background-color: rgba(90, 129, 161, 0.7); 
+  background-color: rgba(90, 129, 161, 0.7);
 }
 .home__container__two {
   display: flex;
@@ -95,9 +95,9 @@ $Italic: Italic;
   height: 100px;
 }
 .suggestions-header__br {
-    border-top: 1px solid $grayDay;
-    width: 20%;
-    margin: 10px 0px;
+  border-top: 1px solid $grayDay;
+  width: 20%;
+  margin: 10px 0px;
 }
 .suggestions-header__title {
   font-family: $Bold;
@@ -105,67 +105,151 @@ $Italic: Italic;
 .home__container__four {
   height: 100px;
 }
- 
+
 // home cards
 
 #suggestions {
-    width: 100%;
-    background-color: white;
+  width: 100%;
+  background-color: white;
 }
 .suggestions__container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 #suggestions-cards {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 #suggestions-cards__column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
 }
 #suggestions-cards__card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    color: black;
-    height: 200px;
-    width: 300px;
-    margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  height: 200px;
+  width: 300px;
+  margin: 0px;
 }
 #suggestions-cards__card:hover {
-    background-color: $blueAmsterdam;
-    color: white;
+  background-color: $blueAmsterdam;
+  color: white;
 }
 #suggestion-card__title {
-font-family: $Bold
+  font-family: $Bold;
 }
 #suggestion-card__text {
-font-family: $Italic
+  font-family: $Italic;
 }
 
 // scroller
 
 .scroll__container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .suggestions {
-    color: white;
-    font-family: $Italic;
-    font-size: 20px;
-    margin: 0px 5px;
-    background-color: rgba(0,0,0,.6);
-    border: grey;
-    box-shadow: none;
+  color: white;
+  font-family: $Italic;
+  font-size: 20px;
+  margin: 0px 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: grey;
+  box-shadow: none;
 }
 .suggestions:hover {
-    background-color: $blueAmsterdam;
-    color: white;
+  background-color: $blueAmsterdam;
+  color: white;
+}
+
+// modal
+
+#home-map__modal-button {
+  border: none;
+  background: none;
+}
+
+// MQ
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .home__container {
+    height: 350px;
+  }
+  .home__container__one {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 75%;
+    height: 300px;
+    background-image: none;
+    background-size: cover;
+  }
+  .home__title {
+    color: black;
+    font-family: $Bold;
+    font-size: 25px;
+    padding: 10px;
+  }
+  .organizer__one {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    width: 180px;
+    border: none;
+    background-color: white;
+    margin: 0px 0px 20px 0px;
+  }
+  .organizer__two {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 75px;
+    width: 100px;
+    border: 1px solid white;
+    background-color:white;
+  }
+  .scroll__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .suggestions {
+    font-size: 11px;
+    height: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  #home-map__modal-button {
+    font-size: 11px;
+    color: black;
+  }
+
+  // suggestion cards
+
+  #suggestions-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px;
+  }
+  #suggestions-cards__card {
+    color: black;
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+  }
 }
