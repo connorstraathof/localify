@@ -19,6 +19,47 @@ import CurrentLocation from '../../Map'
 // import ScrollUp from '../ScrollToTop/ScrollToTop'
 
 class Home extends React.Component {
+
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoading: true,
+      modal: false,
+      showingInfoWindow: false,
+      activeMarker: {},
+      selectedPlace: {},
+      stores: [{ name: 'THE LIBRA ROOM', latitude: 49.271157, longitude: -123.069342 },
+      {name:'THE EMERALD COCKTAIL LOUNGE', latitude:49.280664, longitude:-123.097446},
+      {name:'THE DIAMOND COCKTAIL LOUNGE', latitude:49.283358, longitude:-123.104006},
+      {name:'33 ACRES BREWING', latitude:49.264112, longitude:-123.105328},
+      {name:'DD MAU', latitude:49.282243, longitude:-123.101125},
+      {name:'PEPINOS', latitude:49.279082, longitude:-123.070617},
+      {name:'DOWN LOW CHICKEN SHACK', latitude:49.276579, longitude:-123.069678},
+      {name:'COMO TAPERIA', latitude:49.264971, longitude:-123.100688},
+      {name:'THE BLOCK CLOTHING', latitude:49.284118, longitude:-123.109990},
+      {name:'MILANO COFFEE', latitude:49.263926, longitude:-123.108736},
+      {name:'JJ BEAN COFFEE', latitude:49.264976, longitude:-123.069420},
+      {name:'THE FEDERAL', latitude:49.261917, longitude:-123.103182},
+      {name:'E:CLE', latitude:49.284537, longitude:-123.110863},
+      {name:'STRANGE FELLOWS BREWING', latitude:49.272705, longitude:-123.077861},
+      {name:'FAMOUS FOODS', latitude:49.248541, longitude:-123.071462},
+      {name:'STORM BREWING', latitude:49.282200, longitude:-123.070220},
+      {name:'REVOLVER COFFEE', latitude:49.283387, longitude:-123.109420},
+      {name:'49TH PARALLEL COFFEE', latitude:49.259196, longitude:-123.100795},
+      {name:'ELYSIAN COFFEE', latitude:49.264494, longitude:-123.105053},
+      {name:'HOME ON THE RANGE ORGANICS', latitude:49.262999, longitude:-123.100179},
+      {name:'HUNDY', latitude:49.267964, longitude:-123.151432},
+      {name:'HUNNYBEE BRUNCH', latitude:49.277772, longitude:-123.097174},
+      {name:'LES AMI DU FROMAGE', latitude:49.281259, longitude:-123.086226},
+      {name:'LE MARCHE ST.GEORGE', latitude:49.245788, longitude:-123.094435}
+    ]
+    }
+    this.onMarkerClick = this.onMarkerClick.bind(this)
+    this.toggle = this.toggle.bind(this)
+  }
+
+
   onMarkerClick = (props, marker, e) =>
     this.setState({
       selectedPlace: props,
@@ -34,31 +75,6 @@ class Home extends React.Component {
       })
     }
   }
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      isLoading: true,
-      modal: false,
-      showingInfoWindow: false,
-      activeMarker: {},
-      selectedPlace: {},
-      stores: [{ name: 'libra room', latitude: 49.271157, longitude: -123.069342 },
-      {name:'the Emerald', latitude:49.280664, longitude:-123.097446},
-      {name:'the Diamond', latitude:49.283358, longitude:-123.104006},
-      {name:'33 Acres', latitude:49.264112, longitude:-123.105328},
-      {name:'DD Mau', latitude:49.282243, longitude:-123.101125},
-      {name:'Pepinos', latitude:49.279082, longitude:-123.070617},
-      {name:'Down Low', latitude:49.276579, longitude:-123.069678},
-      {name:'Como Taperia', latitude:49.264971, longitude:-123.100688},
-      {name:'the Block', latitude:49.284118, longitude:-123.109990},
-      {name:'Milano coffee', latitude:49.263926, longitude:-123.108736},
-      {name:'JJ Bean', latitude:49.264976, longitude:-123.069420},
-      {name:'the Federal', latitude:49.261917, longitude:-123.103182}
-    ]
-    }
-    this.toggle = this.toggle.bind(this)
-  }
   toggle() {
     this.setState(prevState => ({
       modal: !prevState.modal
@@ -69,16 +85,16 @@ class Home extends React.Component {
   }
   displayMarkers = () => {
     return this.state.stores.map((store, index) => {
-      return <Marker onClick={store.name} key={index} id={index} position={{
+      return <Marker onClick={this.onMarkerClick} name={store.name} key={index} id={index} position={{
        lat: store.latitude,
        lng: store.longitude
      }}
      >
+       <Button>Hello</Button>
        <InfoWindow
        marker={this.state.activeMarker}
        visible={this.state.showingInfoWindow}
        onClose={this.onClose}>
-         <h1>{this.name}</h1>
        </InfoWindow>
      </Marker>
     })
@@ -188,7 +204,10 @@ class Home extends React.Component {
         <div className='home__container__one'>
           <div className='home__organizers'>
             <div className='organizer__one'>
-              <h4 className='home__title'>LOCALIFY VANCOUVER</h4>
+              <div className='home__title'>
+              <h4 className='home__company'>LOCALIFY</h4>
+              <h4 className='home__city'>VANCOUVER</h4>
+              </div>
             </div>
             <div className='organizer__two'>{this.scroller()}</div>
           </div>
