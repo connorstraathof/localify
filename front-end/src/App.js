@@ -1,14 +1,11 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
-import 'firebase/auth'
 import Navigation from './Components/Navigation/Navigation'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
-import Comments from './Components/Comments/MainComment'
 import Join from './Components/JoinPage/JoinPage'
 import Footer from './Components/Footer/Footer'
-// import SignUp from './Components/SignUp'
 import Grocery from './Components/ShopsAll/Grocery/Grocery'
 import Grocer from './Components/ShopsAll/Grocery/Grocer'
 import Cafes from './Components/ShopsAll/Cafes/Cafes'
@@ -21,6 +18,7 @@ import Shops from './Components/ShopsAll/Shops/Shops'
 import Shop from './Components/ShopsAll/Shops/Shop'
 import Foods from './Components/ShopsAll/Food/Foods'
 import Food from './Components/ShopsAll/Food/Food'
+import MainComment from './Components/Comment/MainComment'
 // import NotFound from './Components/NotFound/NotFound'
 
 const App = props => (
@@ -32,8 +30,8 @@ const App = props => (
         {/* <Route component={NotFound} /> */}
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={About} />
-        <Route exact path='/comments' component={Comments} />
         <Route exact path='/join' component={Join} />
+        <Route exact path='/comments' component={MainComment} />
         <Route
           exact
           path='/artists'

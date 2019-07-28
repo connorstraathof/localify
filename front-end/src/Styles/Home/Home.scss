@@ -38,6 +38,7 @@ $Italic: Italic;
 }
 .home__container__one {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -61,6 +62,7 @@ $Italic: Italic;
 }
 .home__organizers {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
@@ -73,7 +75,7 @@ $Italic: Italic;
   width: 500px;
   border: none;
   background-color: rgba(90, 129, 161, 0.7);
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 .organizer__two {
   display: flex;
@@ -81,9 +83,10 @@ $Italic: Italic;
   flex-direction: column;
   align-items: center;
   height: 75px;
-  width: 300px;
+  width: 100%;
   border: 1px solid white;
-  background-color: rgba(90, 129, 161, 0.7);
+  background-color: white;
+  margin: 0px;
 }
 .home__container__two {
   display: flex;
@@ -117,8 +120,12 @@ $Italic: Italic;
 // home cards
 
 #suggestions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   background-color: white;
+
 }
 .suggestions__container {
   display: flex;
@@ -127,6 +134,7 @@ $Italic: Italic;
 }
 #suggestions-cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -165,24 +173,46 @@ $Italic: Italic;
   flex-direction: row;
 }
 .suggestions {
-  color: white;
-  font-family: $Italic;
+  color: black;
+  font-family: $Regular;
   font-size: 20px;
   margin: 0px 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: grey;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
   box-shadow: none;
+}
+#suggestions-comments {
+  color: black;
+  font-family: $Regular;
+  font-size: 20px;
+  margin: 0px 5px;
+  background-color: white;
+  box-shadow: none;
+  border: none;
 }
 .suggestions:hover {
   background-color: $blueAmsterdam;
   color: white;
 }
+#suggestions-comments:hover {
+  background-color: $blueAmsterdam;
+  color: white;
+  border-radius: none;
+}
 
 // modal
 
 #home-map__modal-button {
+  color: black;
+  font-size: 20px;
+  background-color: white;
   border: none;
   background: none;
+}
+#home-map__modal-button:hover {
+  background-color: $blueAmsterdam;
+  color: white;
 }
 
 // MQ

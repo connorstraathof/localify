@@ -42,6 +42,16 @@ $Italic: Italic;
 // about modal
 
 // search modal
+
+#search-modal {
+  width: 1500px
+}
+.modal-content {
+  width: 1500px;
+}
+// #search-modal__test {
+//   width: 1500px;
+// }
 #search-modal__button__container {
   display: flex;
   align-items: center;

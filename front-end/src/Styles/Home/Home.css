@@ -35,6 +35,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -74,6 +78,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -101,7 +108,7 @@
   width: 500px;
   border: none;
   background-color: rgba(90, 129, 161, 0.7);
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .organizer__two {
@@ -119,9 +126,10 @@
       -ms-flex-align: center;
           align-items: center;
   height: 75px;
-  width: 300px;
+  width: 100%;
   border: 1px solid white;
-  background-color: rgba(90, 129, 161, 0.7);
+  background-color: white;
+  margin: 0px;
 }
 
 .home__container__two {
@@ -174,6 +182,14 @@
 }
 
 #suggestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   background-color: white;
 }
@@ -192,6 +208,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
@@ -255,14 +274,26 @@
 }
 
 .suggestions {
-  color: white;
-  font-family: Italic;
+  color: black;
+  font-family: Regular;
   font-size: 20px;
   margin: 0px 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: grey;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+#suggestions-comments {
+  color: black;
+  font-family: Regular;
+  font-size: 20px;
+  margin: 0px 5px;
+  background-color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 .suggestions:hover {
@@ -270,9 +301,23 @@
   color: white;
 }
 
+#suggestions-comments:hover {
+  background-color: #004b87;
+  color: white;
+  border-radius: none;
+}
+
 #home-map__modal-button {
+  color: black;
+  font-size: 20px;
+  background-color: white;
   border: none;
   background: none;
+}
+
+#home-map__modal-button:hover {
+  background-color: #004b87;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 450px) {

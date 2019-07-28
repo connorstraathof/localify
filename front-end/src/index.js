@@ -6,8 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrismicApp from './PrismicApp';
 
-require('./ably');
-require('./AblyCafe');
 
 ReactDOM.render(<PrismicApp  />, document.getElementById('root'));
 

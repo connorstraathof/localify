@@ -3,7 +3,8 @@ const app = express()
 const bodyParser = require('body-parser')
 const fs = require('fs')
 const cors = require('cors')
-const port = process.env.PORT || process.argv[2] || 8080
+// const port = process.env.PORT || process.argv[2] || 7777
+const port = 7777
 const shops = require('./Routes/shops')
 const stock = require('./Routes/stock')
 
