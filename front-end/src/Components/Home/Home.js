@@ -42,7 +42,7 @@ class Home extends React.Component {
         { name: 'HUNDY', latitude: 49.267964, longitude: -123.151432 },
         { name: 'HUNNYBEE BRUNCH', latitude: 49.277772, longitude: -123.097174 },
         { name: 'LES AMI DU FROMAGE', latitude: 49.281259, longitude: -123.086226 },
-        { name: 'LE MARCHE ST.GEORGE', latitude: 49.245788, longitude: -123.094435 }
+        { name: 'LE MARCHE ST.GEORGE', latitude: 49.245788, longitude: -123.094435,link: '/' }
       ]
     }
     this.onMarkerClick = this.onMarkerClick.bind(this)
@@ -85,12 +85,13 @@ class Home extends React.Component {
             lng: store.longitude
           }}
         >
-          <Button>Hello</Button>
+          <a href='/'>
           <InfoWindow
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
             onClose={this.onClose}
           />
+          </a>
         </Marker>
       )
     })

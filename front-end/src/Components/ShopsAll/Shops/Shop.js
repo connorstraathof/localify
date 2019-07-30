@@ -8,6 +8,7 @@ import ImageCaption from '../../Slices/ImageCaption'
 import Loader from '../../Tools/Loaders/Loader/Loader'
 import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap'
 import '../../../Styles/Generic/Generic.css'
+import { Collapse, CardBody, Card } from 'reactstrap'
 
 const mapStyles = {
   width: '70%',
@@ -21,10 +22,12 @@ class Shop extends React.Component {
     this.state = {
       doc: null,
       notFound: false,
-      modal: false
+      modal: false,
+      collapse: false
     }
 
     this.toggle = this.toggle.bind(this)
+    this.toggle2 = this.toggle2.bind(this)
 
     if (props.prismicCtx) {
       this.fetchPage(props)
@@ -35,7 +38,9 @@ class Shop extends React.Component {
       modal: !prevState.modal
     }))
   }
-
+  toggle2() {
+    this.setState(state => ({ collapse: !state.collapse }))
+  }
   componentDidUpdate(prevProps) {
     this.props.prismicCtx.toolbar()
     // We fetch the page only after props have changed and PrismicCtx is no longer null
@@ -46,7 +51,7 @@ class Shop extends React.Component {
 
   fetchPage(props) {
     // We are using the function to get a document by its uid
-    return props.prismicCtx.api.getByUID('drinks_post', props.match.params.uid, {}, (err, doc) => {
+    return props.prismicCtx.api.getByUID('shop_post', props.match.params.uid, {}, (err, doc) => {
       if (doc) {
         // We put the retrieved content in the state as a doc variable
         this.setState({ doc })
@@ -131,7 +136,32 @@ class Shop extends React.Component {
     </div>
     )
   }
-
+  addressDropdown() {
+    if (this.state.doc) {
+      let titled = this.state.doc.data.title.length !== 0
+      return (
+        <div>
+          <Button color='primary' onClick={this.toggle2} style={{ marginBottom: '1rem' }}>
+            ADDRESS
+          </Button>
+          <Collapse isOpen={this.state.collapse}>
+            <Card>
+              <CardBody>
+                <div id='generic__post__address'>
+                  <div className='generic__address'>ADDRESS:</div>
+                  {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
+                </div>
+                <div className='generic__post__one'>
+                <div className='generic__address'>CONTACT:</div>
+                  {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
+                </div>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </div>
+      )
+    }
+  }
 
   render() {
     if (this.state.doc) {
@@ -148,8 +178,8 @@ class Shop extends React.Component {
           <div className='shop-container'>
             <div className='outer-container'>
               <div className='back'>
-                <a id='shop__back' href='/drinks'>
-                  BACK
+                <a id='shop__back' href='/shops'>
+                  SHOPS
                 </a>
               </div>
               <div className='info__container'>
@@ -159,15 +189,11 @@ class Shop extends React.Component {
                 <div className='generic__post__one'>
                   {titled ? RichText.asText(this.state.doc.data.long_description) : 'Untitled'}
                 </div>
-                <div id='generic__post__address'>
-                  <div className='generic__address'>ADDRESS:</div>
-                  {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
-                </div>
-                <div className='generic__post__one'>
-                  {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
+                <div className='contact-map__container'>
+                  {this.shopModal()}
+                  {this.addressDropdown()}
                 </div>
               </div>
-              <div>{this.shopModal()}</div>
             </div>
           </div>
           {/* Go through the slices of the post and render the appropiate one */}

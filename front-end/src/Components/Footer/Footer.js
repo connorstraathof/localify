@@ -28,14 +28,14 @@ class Footer extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>LOCALIFY HELP</ModalHeader>
           <ModalBody className='footer__help-input'>
-            <h1 className='help__input__title'>What can we help you with?</h1>
+            <div className='help__input__title'>What can we help you with?</div>
             <input className='help__input' placeholder='Leave your feedback...' />
           </ModalBody>
           <ModalHeader/>
           <ModalBody className='footer__contact-input'>
-            <h1 className='contact__questions'>QUESTIONS?</h1>
+            <div className='contact__questions'>QUESTIONS?</div>
             <a className='footer__contact-email' href={'cstraathof@gmail.com'}>
-              <h1 className='footer__contact-link'>EMAIL US</h1>
+              <div className='footer__contact-link'>EMAIL US</div>
             </a>
           </ModalBody>
           <ModalFooter>

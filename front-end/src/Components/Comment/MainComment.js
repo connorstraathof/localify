@@ -53,7 +53,6 @@ class MainComment extends Component {
             <div className='comment-br'/>
             <div className='subheader-container'>
             <p className='comment-subheader'>LET US KNOW WHAT YOU LIKED OR DISLIKED ABOUT A BUSINESS YOU VISITED</p>
-            <p className='comment-subheader__two'>FEEL FREE TO ENTER ANONYMOUS INSTEAD OF YOUR NAME FOR PRIVACY</p>
             <div className='comment-subheader__br-container'>
             <div className='comment-subheader__br'/>
             </div>

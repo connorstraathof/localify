@@ -18,7 +18,7 @@
 }
 
 h1 {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .background-image {
@@ -186,12 +186,6 @@ h1 {
   text-decoration: none;
 }
 
-.blog-post:hover {
-  color: white;
-  background-color: #004b87;
-  text-decoration: none;
-}
-
 #post-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,6 +270,17 @@ h1 {
   margin: 10px 0px 10px 0px;
 }
 
+.contact-map__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 50px;
+}
+
 #generic__post__address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,7 +296,12 @@ h1 {
 }
 
 #generic__post__title {
-  font-size: 55px;
+  font-size: 25px;
+  font-family: Bold;
+}
+
+#generic__posts__title {
+  font-size: 25px;
   font-family: Bold;
 }
 
@@ -307,16 +317,21 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .generic__post__contact-info__one {
   margin: 0px;
+  font-size: 15px;
 }
 
 .generic__post__contact-info__break {
   border-left: 1px solid #b3b3b0;
   margin: 0px 10px;
-  height: 12px;
+  height: 15px;
 }
 
 #backup__container {

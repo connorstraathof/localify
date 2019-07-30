@@ -9,7 +9,6 @@ export default class CommentForm extends Component {
 
       comment: {
         name: "",
-        company: "",
         message: ""
       }
     };
@@ -67,15 +66,7 @@ export default class CommentForm extends Component {
           // clear the message box
           this.setState({
             loading: false,
-            comment: { ...comment, message: "" }
-          });
-          this.setState({
-            loading: false,
-            comment: { ...comment, name: "" }
-          });
-          this.setState({
-            loading: false,
-            comment: { ...comment, business: "" }
+            comment: { ...comment, name: "", message: "" }
           });
         }
       })
@@ -91,7 +82,7 @@ export default class CommentForm extends Component {
    * Simple validation
    */
   isFormValid() {
-    return this.state.comment.name !== "" && this.state.comment.message !== "" && this.state.comment.business !== "";
+    return this.state.comment.name !== "" && this.state.comment.message !== "";
   }
 
   renderError() {
@@ -110,18 +101,8 @@ export default class CommentForm extends Component {
               onChange={this.handleFieldChange}
               value={this.state.comment.name}
               className="form-control"
-              placeholder="YOUR FIRST NAME"
+              placeholder="PLACE YOU VISITED"
               name="name"
-              type="text"
-            />
-          </div>
-          <div className="form-group">
-            <input
-              onChange={this.handleFieldChange}
-              value={this.state.comment.business}
-              className="form-control"
-              placeholder="COMPANY YOU VISITED"
-              name="business"
               type="text"
             />
           </div>

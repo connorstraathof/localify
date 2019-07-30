@@ -19,6 +19,7 @@ import Shop from './Components/ShopsAll/Shops/Shop'
 import Foods from './Components/ShopsAll/Food/Foods'
 import Food from './Components/ShopsAll/Food/Food'
 import MainComment from './Components/Comment/MainComment'
+import Submission from './Components/SubmissionPage/SubmissionMain'
 // import NotFound from './Components/NotFound/NotFound'
 
 const App = props => (
@@ -32,6 +33,7 @@ const App = props => (
         <Route exact path='/about' component={About} />
         <Route exact path='/join' component={Join} />
         <Route exact path='/comments' component={MainComment} />
+        <Route exact path='/submission' component={Submission} />
         <Route
           exact
           path='/artists'

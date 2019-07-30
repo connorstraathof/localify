@@ -8,6 +8,7 @@ import ImageCaption from '../../Slices/ImageCaption'
 import Loader from '../../Tools/Loaders/Loader/Loader'
 import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap'
 import '../../../Styles/Generic/Generic.css'
+import { Collapse, CardBody, Card } from 'reactstrap'
 
 const mapStyles = {
   width: '70%',
@@ -20,10 +21,12 @@ class Post extends React.Component {
     this.state = {
       doc: null,
       notFound: false,
-      modal: false
+      modal: false,
+      collapse: false
     }
 
     this.toggle = this.toggle.bind(this)
+    this.toggle2 = this.toggle2.bind(this)
 
     if (props.prismicCtx) {
       this.fetchPage(props)
@@ -33,6 +36,9 @@ class Post extends React.Component {
     this.setState(prevState => ({
       modal: !prevState.modal
     }))
+  }
+  toggle2() {
+    this.setState(state => ({ collapse: !state.collapse }))
   }
 
   componentDidUpdate(prevProps) {
@@ -45,7 +51,7 @@ class Post extends React.Component {
 
   fetchPage(props) {
     // We are using the function to get a document by its uid
-    return props.prismicCtx.api.getByUID('drinks_post', props.match.params.uid, {}, (err, doc) => {
+    return props.prismicCtx.api.getByUID('post', props.match.params.uid, {}, (err, doc) => {
       if (doc) {
         // We put the retrieved content in the state as a doc variable
         this.setState({ doc })
@@ -87,50 +93,75 @@ class Post extends React.Component {
   shopModal() {
     return (
       <div id='shop-modal'>
-      <div>
-        <Button onClick={this.toggle}>MAP</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody id='shop-modal__map'>
-          <div>{this.shopMap()}</div>
-          </ModalBody>
-          <ModalFooter>
-            <Button color='primary' onClick={this.toggle}>
-              Do Something
-            </Button>{' '}
-            <Button color='secondary' onClick={this.toggle}>
-              Cancel
-            </Button>
-          </ModalFooter>
-        </Modal>
-      </div>
+        <div>
+          <Button onClick={this.toggle}>MAP</Button>
+          <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+            <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+            <ModalBody id='shop-modal__map'>
+              <div>{this.shopMap()}</div>
+            </ModalBody>
+            <ModalFooter>
+              <Button color='primary' onClick={this.toggle}>
+                Do Something
+              </Button>{' '}
+              <Button color='secondary' onClick={this.toggle}>
+                Cancel
+              </Button>
+            </ModalFooter>
+          </Modal>
+        </div>
       </div>
     )
   }
 
   shopMap() {
     if (this.state.doc)
-    return(
-      <div className='shop-map__container'>
-      <Map
-      google={this.props.google}
-      zoom={12.5}
-      style={mapStyles}
-      initialCenter={{
-        lat: 49.246292,
-        lng: -123.116226
-      }}
-    >
-      <Marker onClick={this.onMarkerClick} name={'Kenyatta International Convention Centre'} />
-      <InfoWindow
-        onClose={this.onClose}
-      >
-      </InfoWindow>
-    </Map>
-    </div>
-    )
+      return (
+        <div className='shop-map__container'>
+          <Map
+            google={this.props.google}
+            zoom={12.5}
+            style={mapStyles}
+            initialCenter={{
+              lat: 49.246292,
+              lng: -123.116226
+            }}
+          >
+            <Marker
+              onClick={this.onMarkerClick}
+              name={'Kenyatta International Convention Centre'}
+            />
+            <InfoWindow onClose={this.onClose} />
+          </Map>
+        </div>
+      )
   }
-
+  addressDropdown() {
+    if (this.state.doc) {
+      let titled = this.state.doc.data.title.length !== 0
+      return (
+        <div>
+          <Button color='primary' onClick={this.toggle2} style={{ marginBottom: '1rem' }}>
+            ADDRESS
+          </Button>
+          <Collapse isOpen={this.state.collapse}>
+            <Card>
+              <CardBody>
+                <div id='generic__post__address'>
+                  <div className='generic__address'>ADDRESS:</div>
+                  {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
+                </div>
+                <div className='generic__post__one'>
+                <div className='generic__address'>CONTACT:</div>
+                  {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
+                </div>
+              </CardBody>
+            </Card>
+          </Collapse>
+        </div>
+      )
+    }
+  }
 
   render() {
     if (this.state.doc) {
@@ -146,9 +177,9 @@ class Post extends React.Component {
           </div>
           <div className='shop-container'>
             <div className='outer-container'>
-              <div className='back'>
-                <a id='shop__back' href='/drinks'>
-                  BACK
+              <div className='CAFES'>
+                <a id='shop__back' href='/cafes'>
+                  CAFES
                 </a>
               </div>
               <div className='info__container'>
@@ -158,19 +189,15 @@ class Post extends React.Component {
                 <div className='generic__post__one'>
                   {titled ? RichText.asText(this.state.doc.data.long_description) : 'Untitled'}
                 </div>
-                <div id='generic__post__address'>
-                  <div className='generic__address'>ADDRESS:</div>
-                  {titled ? RichText.asText(this.state.doc.data.address) : 'Untitled'}
-                </div>
-                <div className='generic__post__one'>
-                  {titled ? RichText.asText(this.state.doc.data.contact) : 'Untitled'}
+                <div className='contact-map__container'>
+                  {this.shopModal()}
+                  {this.addressDropdown()}
                 </div>
               </div>
-              <div>{this.shopModal()}</div>
             </div>
           </div>
           {/* Go through the slices of the post and render the appropiate one */}
-          {this.renderSliceZone(this.state.doc.data.body)}
+          {/* {this.renderSliceZone(this.state.doc.data.body)} */}
         </div>
       )
     } else if (this.state.notFound) {

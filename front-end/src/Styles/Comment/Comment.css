@@ -172,4 +172,14 @@
   width: 100%;
   padding: 10px;
 }
+
+.business-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 /*# sourceMappingURL=Comment.css.map */

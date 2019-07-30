@@ -73,66 +73,41 @@ export default class Foods extends React.Component {
   blogPostsSection() {
     return (
       <div className='blog-main'>
-        {/* Working from the array of all blog posts, we process each one */}
-        {this.state.posts.map(post => {
-          const logo = { backgroundImage: 'url(' + post.data.logo.url + ')' }
-          /* Store the date as a Date object so we can format it to whatever we need */
-          let postDate = Date(post.data.date)
-          /* Default title when post has no title set */
-          return (
-<a
-              className='blog-post'
-              data-wio-id={post.id}
-              key={post.id}
-              href={this.props.prismicCtx.linkResolver(post)}
-            >
-              <h2>
-                {/* We render a link to a particular post using the linkResolver for the url and its title */}
+      {/* Working from the array of all blog posts, we process each one */}
+      {this.state.posts.map(post => {
+        const logo = { backgroundImage: 'url(' + post.data.logo.url + ')' }
+        /* Store the date as a Date object so we can format it to whatever we need */
+        let postDate = Date(post.data.date)
+        /* Default title when post has no title set */
+        return (
+            <div className='blog-post'>
+              {/* We render a link to a particular post using the linkResolver for the url and its title */}
+              <div>
+              <a
+            className='specific-button'
+            // data-wio-id={post.id}
+            key={post.id}
+            href={this.props.prismicCtx.linkResolver(post)}
+          >SHOP</a>
+              </div>
+              <div className='home'>
+                <div className='blog-avatar' style={logo} />
+              </div>
 
-                <div className='home'>
-                  <div className='blog-avatar' style={logo} />
+              <div className='info__container'>
+                <div id='generic__posts__title'>
+                  {RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}
                 </div>
-
-
-                <div className='info__container'>
-                  <div >
-                    <h1 id='generic__post__title'>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
-                  </div>
-                  <div id='generic__post__shops-description'>
+                <div id='generic__post__shops-description'>
                   {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
-                  </div>
-                  <div className='generic__post__contact-info'>
-                    <div className='generic__post__contact-info__one'>
-                  {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
-                  </div>
-                  <div className='generic__post__contact-info__break'/>
-                  <div className='generic__post__contact-info__one'>
-                  {RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}
-                  </div>
-                  </div>
                 </div>
-              </h2>
-              <p className='blog-post-meta'>
-                <time className='created-at'>
-                  {/* Format the date to M d, Y */}
-                  {postDate
-                    ? new Intl.DateTimeFormat('en-US', {
-                        month: 'short',
-                        day: '2-digit',
-                        year: 'numeric'
-                      }).format(postDate)
-                    : ''}
-                </time>
-              </p>
-              {/* Renders a small preview of the post's text */}
-              {this.firstParagraph(post)}
-            </a>
-          )
-        })}
-      </div>
-    )
-  }
-
+              </div>
+            </div>
+            )
+      })}
+  </div>  
+  )
+}
   shopHead() {
     // Using the queried blog_home document data, we render the top section
     const avatar = { backgroundImage: 'url(' + this.state.doc.data.image.url + ')' }

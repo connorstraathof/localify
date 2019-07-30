@@ -39,7 +39,7 @@ $Italic: Italic;
 
 // search styles
 h1 {
-  font-size: 15px;
+  font-size: 10px;
 }
 .background-image {
  margin: 0px;
@@ -167,11 +167,7 @@ color: white;
   color: black;
   text-decoration: none;
 }
-.blog-post:hover {
-  color: white;
-  background-color: $blueAmsterdam;
-  text-decoration: none;
-}
+
 
 
 // SHOPS
@@ -223,6 +219,12 @@ border-top: 1px solid $grayDay;
   display: flex;
   margin: 10px 0px 10px 0px;
 }
+.contact-map__container {
+display: flex;
+flex-direction: row;
+height: 50px;
+
+}
 #generic__post__address {
   display: flex;
   flex-direction: row;
@@ -231,7 +233,11 @@ border-top: 1px solid $grayDay;
   margin: 0px 5px 0px 0px;
 }
 #generic__post__title {
-  font-size: 55px;
+  font-size: 25px;
+  font-family: $Bold;
+}
+#generic__posts__title {
+  font-size: 25px;
   font-family: $Bold;
 }
 #generic__post__shops-description {
@@ -240,15 +246,17 @@ border-top: 1px solid $grayDay;
 .generic__post__contact-info {
   display: flex;
   flex-direction: row;
-
+width: 100%;
+justify-content: flex-end;
 }
 .generic__post__contact-info__one {
   margin: 0px;
+  font-size: 15px;
 }
 .generic__post__contact-info__break {
   border-left: 1px solid $grayDay;
   margin: 0px 10px;
-  height: 12px;
+  height: 15px;
 }
 #backup__container {
   width: 75%;

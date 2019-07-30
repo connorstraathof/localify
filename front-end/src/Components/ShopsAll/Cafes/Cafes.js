@@ -5,6 +5,7 @@ import Prismic from 'prismic-javascript'
 import { Helmet } from 'react-helmet'
 import Loader from '../../Tools/Loaders/Loader/Loader'
 import '../../../Styles/Generic/Generic.css'
+import { Collapse, Button, CardBody, Card } from 'reactstrap'
 
 export default class BlogHome extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class BlogHome extends React.Component {
     this.state = {
       doc: null,
       notFound: false,
-      posts: []
+      posts: [],
     }
     if (props.prismicCtx) {
       this.fetchPage(props)
@@ -80,56 +81,32 @@ export default class BlogHome extends React.Component {
           let postDate = Date(post.data.date)
           /* Default title when post has no title set */
           return (
-            <a
-              className='blog-post'
-              data-wio-id={post.id}
+              <div className='blog-post'>
+                {/* We render a link to a particular post using the linkResolver for the url and its title */}
+                <div>
+                <a
+              className='specific-button'
+              // data-wio-id={post.id}
               key={post.id}
               href={this.props.prismicCtx.linkResolver(post)}
-            >
-              <h2>
-                {/* We render a link to a particular post using the linkResolver for the url and its title */}
-
+            >SHOP</a>
+                </div>
                 <div className='home'>
                   <div className='blog-avatar' style={logo} />
                 </div>
 
-
                 <div className='info__container'>
-                  <div >
-                    <h1 id='generic__post__title'>{RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}</h1>
+                  <div id='generic__posts__title'>
+                    {RichText.render(post.data.title, this.props.prismicCtx.linkResolver)}
                   </div>
                   <div id='generic__post__shops-description'>
-                  {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
-                  </div>
-                  <div className='generic__post__contact-info'>
-                    <div className='generic__post__contact-info__one'>
-                  {RichText.render(post.data.address, this.props.prismicCtx.linkResolver)}
-                  </div>
-                  <div className='generic__post__contact-info__break'/>
-                  <div className='generic__post__contact-info__one'>
-                  {RichText.render(post.data.contact, this.props.prismicCtx.linkResolver)}
-                  </div>
+                    {RichText.render(post.data.description, this.props.prismicCtx.linkResolver)}
                   </div>
                 </div>
-              </h2>
-              <p className='blog-post-meta'>
-                <time className='created-at'>
-                  {/* Format the date to M d, Y */}
-                  {postDate
-                    ? new Intl.DateTimeFormat('en-US', {
-                        month: 'short',
-                        day: '2-digit',
-                        year: 'numeric'
-                      }).format(postDate)
-                    : ''}
-                </time>
-              </p>
-              {/* Renders a small preview of the post's text */}
-              {this.firstParagraph(post)}
-            </a>
-          )
+              </div>
+              )
         })}
-      </div>
+    </div>  
     )
   }
 
@@ -139,7 +116,7 @@ export default class BlogHome extends React.Component {
     return (
       <div className='home'>
         <div className='blog-avatar' style={avatar} />
-        <h1 className='blog-title'>{RichText.asText(this.state.doc.data.headline)}</h1>
+        <div className='blog-title'>{RichText.asText(this.state.doc.data.headline)}</div>
         <p className='blog-description'>{RichText.asText(this.state.doc.data.description)}</p>
       </div>
     )
@@ -163,9 +140,9 @@ export default class BlogHome extends React.Component {
           <Helmet>
             <title>{RichText.asText(this.state.doc.data.headline)}</title>
           </Helmet>
-              {this.blogHomeHead()}
-              {this.goBack()}
-              {this.blogPostsSection()}
+          {this.blogHomeHead()}
+          {this.goBack()}
+          {this.blogPostsSection()}
         </div>
       )
     } else if (this.state.notFound) {

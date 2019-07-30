@@ -116,10 +116,20 @@ $Italic: Italic;
 // join modal
 
 // explore modal 
-
+#explore-modal {
+  width: 600px;
+}
+.explore-modal__container {
+width: 100%;
+}
 #explore-cards {
   display: flex;
   flex-wrap: wrap;
+}
+#explore-cards__column {
+height: 130px;
+width: 130px;
+margin: 10px;
 }
 #explore-cards__card {
   display: flex;
