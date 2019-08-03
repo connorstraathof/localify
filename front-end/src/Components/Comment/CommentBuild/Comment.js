@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Comment(props) {
-  const { name, message, text, time } = props.comment;
+  const { name, message, number, time } = props.comment;
 
   return (
     <div className="media mb-3">
@@ -24,7 +24,7 @@ export default function Comment(props) {
         <small className="float-right text-muted">{time}</small>
         <h6 className="mt-0 mb-1 text-muted">{name}</h6>    
         {message}
-        {text}
+        {number}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { Security, ImplicitCallback, SecureRoute } from '@okta/okta-react'
 import Navigation from './Components/Navigation/Navigation'
 import Home from './Components/Home/Home'
 import About from './Components/About/About'
@@ -19,21 +20,35 @@ import Shop from './Components/ShopsAll/Shops/Shop'
 import Foods from './Components/ShopsAll/Food/Foods'
 import Food from './Components/ShopsAll/Food/Food'
 import MainComment from './Components/Comment/MainComment'
-import Submission from './Components/SubmissionPage/SubmissionMain'
+import Login from './Components/Auth/Login'
+import SignedIn from './Components/Auth/SignedIn/SignedIn'
+import SignInHome from './Components/Auth/SignedIn/SignInHome'
 // import NotFound from './Components/NotFound/NotFound'
+
+function onAuthRequired({history}) {
+  history.push('/login');
+}
 
 const App = props => (
   <Router>
+    <Security issuer='https://dev-369622.okta.com/oauth2/default'
+                  client_id='0oa11m82bfXrgybhx357'
+                  redirect_uri={window.location.origin + '/implicit/callback'}
+                  onAuthRequired={onAuthRequired} >
     <div className='main__div'>
       <Navigation />
       <Switch>
+
         <Redirect exact from='/blog/' to='/' />
         {/* <Route component={NotFound} /> */}
         <Route exact path='/' component={Home} />
         <Route exact path='/about' component={About} />
         <Route exact path='/join' component={Join} />
         <Route exact path='/comments' component={MainComment} />
-        <Route exact path='/submission' component={Submission} />
+        <Route exact path='/signinhome' component={SignInHome} />
+        <SecureRoute exact path='/members' exact={true} component={SignedIn} />
+        <Route exact path='/login' render={() => <Login baseUrl='https://dev-369622.okta.com}' />} />
+        <Route path='/implicit/callback' component={ImplicitCallback} />
         <Route
           exact
           path='/artists'
@@ -96,8 +111,9 @@ const App = props => (
         />
         {/* <Route exact path='/navside' component={NavSide}/> */}
       </Switch>
-      <Footer/>
+      <Footer />
     </div>
+    </Security>
   </Router>
 )
 

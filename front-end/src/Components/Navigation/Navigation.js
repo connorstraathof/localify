@@ -108,16 +108,16 @@ export default class Navigation extends React.Component {
         </Button>
         <Modal id='explore-modal' isOpen={this.state.modal2} toggle={this.toggle2}>
           <div class='explore-modal__container'>
-          <ModalHeader toggle={this.toggle2}>
-            <h1 className='explore-modal__header-title'>EXPLORE</h1>
-            <p className='explore-modal__header-description'>What are you looking for?</p>
-          </ModalHeader>
-          <ModalBody id='explore-modal__body'>{this.exploreCards()}</ModalBody>
-          <ModalFooter>
-            <Button id='explore-modal__cancel-button' onClick={this.toggle2}>
-              Cancel
-            </Button>
-          </ModalFooter>
+            <ModalHeader toggle={this.toggle2}>
+              <h1 className='explore-modal__header-title'>EXPLORE</h1>
+              <p className='explore-modal__header-description'>What are you looking for?</p>
+            </ModalHeader>
+            <ModalBody id='explore-modal__body'>{this.exploreCards()}</ModalBody>
+            <ModalFooter>
+              <Button id='explore-modal__cancel-button' onClick={this.toggle2}>
+                Cancel
+              </Button>
+            </ModalFooter>
           </div>
         </Modal>
       </div>
@@ -159,6 +159,24 @@ export default class Navigation extends React.Component {
       </Row>
     )
   }
+  logIn() {
+    return (
+      <div>
+        <Button id='nav__button' href='/login'>
+          <div className='nav__button__search-title'>LOGIN</div>
+        </Button>
+      </div>
+    )
+  }
+  logInHome() {
+    return (
+      <div>
+        <Button id='nav__button' href='/signinhome'>
+          <div className='nav__button__search-title'>HOME</div>
+        </Button>
+      </div>
+    )
+  }
 
   render() {
     return (
@@ -170,6 +188,9 @@ export default class Navigation extends React.Component {
             </Button>
           </div>
           <div className='nav__right'>
+            {this.logIn()}
+            {this.logInHome()}
+          <div className='nav-break' />
             {this.infoDropdown()}
             <div className='nav-break' />
             {this.exploreModal()}
