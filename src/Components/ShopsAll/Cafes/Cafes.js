@@ -112,12 +112,15 @@ export default class BlogHome extends React.Component {
 
   blogHomeHead() {
     // Using the queried blog_home document data, we render the top section
-    const avatar = { backgroundImage: 'url(' + this.state.doc.data.image.url + ')' }
+    const avatar = { backgroundImage: 'url(localify-cafe.jpg)' }
     return (
-      <div className='home'>
-        <div className='blog-avatar' style={avatar} />
-        <div className='blog-title'>{RichText.asText(this.state.doc.data.headline)}</div>
-        <p className='blog-description'>{RichText.asText(this.state.doc.data.description)}</p>
+      <div className='blog-head-home'>
+        <div className='avatar-container'>
+        <div className='blog-head__avatar' style={avatar} />
+        </div>
+        <div className='blog-head__br'/>
+        <p className='blog-head__description'>{RichText.asText(this.state.doc.data.description)}</p>
+        <div className='blog-head__br'/>
       </div>
     )
   }
@@ -132,6 +135,8 @@ export default class BlogHome extends React.Component {
       </div>
     )
   }
+
+ 
 
   render() {
     if (this.state.doc) {

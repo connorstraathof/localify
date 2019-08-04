@@ -110,13 +110,15 @@ export default class Shops extends React.Component {
 }
 
   shopHead() {
-    // Using the queried blog_home document data, we render the top section
-    const avatar = { backgroundImage: 'url(' + this.state.doc.data.image.url + ')' }
+    const avatar = { backgroundImage: 'url(localify-shop.jpg)' }
     return (
-      <div className='home'>
-        <div className='blog-avatar' style={avatar} />
-        <h1 className='blog-title'>{RichText.asText(this.state.doc.data.headline)}</h1>
-        <p className='blog-description'>{RichText.asText(this.state.doc.data.description)}</p>
+      <div className='blog-head-home'>
+        <div className='shop__avatar-container'>
+        <div className='shop__blog-head__avatar' style={avatar} />
+        </div>
+        <div className='blog-head__br'/>
+        <p className='blog-head__description'>{RichText.asText(this.state.doc.data.description)}</p>
+        <div className='blog-head__br'/>
       </div>
     )
   }

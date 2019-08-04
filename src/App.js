@@ -37,18 +37,18 @@ const App = props => (
     <div className='main__div'>
       <Navigation />
       <Security
-        issuer='https://dev-709266.okta.com/oauth2/default'
-        client_id='0oa1211i9bQZoDhRD357'
-        redirect_uri={window.location.origin + '/implicit/callback'}
-        onAuthRequired={onAuthRequired}
-      >
+          issuer="https://dev-528253.okta.com/oauth2/default"
+          client_id="0oa120xq64iZvDX42357"
+          redirect_uri={window.location.origin + '/implicit/callback'}
+          onAuthRequired={onAuthRequired}
+        >
         <Route exact path='/loginpage' component={LogInPage} />
         <Route exact path='/signinhome' component={SignInHome} />
         <SecureRoute exact path='/staff' exact={true} component={Staff} />
         <Route
           exact
           path='/login'
-          render={() => <Login baseUrl='https://dev-709266.okta.com}' />}
+          render={() => <Login baseUrl="https://dev-528253.okta.com" />}
         />
         <Route path='/implicit/callback' component={ImplicitCallback} />
       </Security>
