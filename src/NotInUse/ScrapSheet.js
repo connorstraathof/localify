@@ -20,7 +20,7 @@
 //
 //
 //
-// to engage comments = php -S localhost:7777
+// to engage comments cd into the api folder = php -S localhost:7777
 
 
 // unnecessary json

@@ -25,6 +25,7 @@ import LogInPage from './Components/Login/layout/LogInPage'
 import Login from './Components/Login/auth/Login'
 import Staff from './Components/Login/pages/Staff'
 import SignInHome from './Components/Login/pages/Home'
+import Submission from './Components/SubmissionPage/SubmissionMain'
 // import NotFound from './Components/NotFound/NotFound'
 
 function onAuthRequired({ history }) {
@@ -58,6 +59,7 @@ const App = props => (
         <Route exact path='/about' component={About} />
         <Route exact path='/join' component={Join} />
         <Route exact path='/comments' component={MainComment} />
+        <Route exact path='/submissions' component={Submission} />
 
         <Route
           exact
